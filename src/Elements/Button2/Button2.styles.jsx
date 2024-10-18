@@ -13,7 +13,6 @@ export const useStyles = makeStyles(() => ({
         padding:"7px 12px",
         fontSize:"1rem",
         borderRadius:"10px",
-        margin:"50px",
         textAlign:"center",
         fontWeight:"500",
         fontFamily:"roboto"

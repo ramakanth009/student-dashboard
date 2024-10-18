@@ -11,7 +11,7 @@ function App() {
     <div>
       {/* <Sidenav /> */}
       {/* <Card1/> */}
-      {/* <Card1/> */}
+      {/* <Card2/> */}
       {/* <Button2/> */}
       {/* <Home/> */}
     </div>
