@@ -5,5 +5,8 @@ export const useStyles = makeStyles(() => ({
         width: '250px',
         height: '100vh',
         backgroundColor: '#f0f0f0',
+      },
+      sidebarlogos:{
+        paddingRight:"10px"
       }
 }))
