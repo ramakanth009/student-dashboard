@@ -1,20 +1,22 @@
+
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Sidenav from './Components/Sidenav/Sidenav';
-import Button1 from './Elements/Button1/Button1';
-import Button2 from './Elements/Button2/Button2';
-import Card1 from './Elements/Card1/Card1';
-import Card2 from './Elements/Card2/Card2';
-import Home from './Pages/Home/Home';
+import AppRoutes from './Routes/Routes'; // Import the routes
 
 function App() {
   return (
-    <div>
-      {/* <Sidenav /> */}
-      {/* <Card1/> */}
-      {/* <Card2/> */}
-      {/* <Button2/> */}
-      {/* <Home/> */}
-    </div>
+    <Router>
+      <div style={{ display: 'flex' }}>
+        {/* Sidenav is always visible */}
+        <Sidenav />
+
+        {/* Main content area */}
+        <div style={{ flexGrow: 1, padding: '20px' }}>
+          <AppRoutes /> {/* Render the imported routes */}
+        </div>
+      </div>
+    </Router>
   );
 }
 
