@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import Sidenav from "./components/Sidenav/sidenav";
+import Sidenav from "./Components/Sidenav/sidenav";
 import AppRoutes from "./routes/routes"; // Import the routes
 
 function App() {
