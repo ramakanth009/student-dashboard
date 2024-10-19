@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { useStyles } from "./Card2.styles";
-import Button2 from "../Button2/Button2";
+import { useStyles } from "./styles";
+import Button2 from "../Button2/button2";
 
-const Card2 = ({ heading, paragraph, buttonText, topElement }) => {
+const Card2 = ({ heading, paragraph, buttonText, sideElement }) => {
   const classes = useStyles();
 
   return (
@@ -18,15 +18,16 @@ const Card2 = ({ heading, paragraph, buttonText, topElement }) => {
         >
           {paragraph}
         </Typography>
-        <Button2>{buttonText}hello</Button2>
+        <Button2>{buttonText}</Button2>
       </Box>
 
-      {/* Conditionally render the top element (icon, image, or custom component) */}
+      {/* Conditionally render the side element (icon, image, or custom component) */}
       <Box className={classes.rightSection}>
-        {topElement && <Box className={classes.topElement}>{topElement}</Box>}
+        {sideElement && <Box className={classes.sideElement}>{sideElement}</Box>}
       </Box>
     </Box>
   );
 };
+
 
 export default Card2;

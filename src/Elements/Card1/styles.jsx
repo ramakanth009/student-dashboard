@@ -9,7 +9,7 @@ export const useStyles = makeStyles(() => ({
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     backgroundColor: '#fff',
     textAlign: 'center',
-    maxWidth: '200px',
+    maxWidth: '300px',
     margin: '0 auto',
     display:"flex",
     flexDirection:"column",
@@ -26,12 +26,14 @@ export const useStyles = makeStyles(() => ({
  
   heading: {
     marginBottom: '20px',
-    paddingBottom:"15px"
+    paddingBottom:"10px",
+    paddingRight:"60px",
+    paddingLeft:"60px"
 },
 paragraph: {
-    marginBottom: '24px',
+    marginBottom: '20px',
+    paddingBottom:"10px",
     fontFamily:"none",
     fontWeight:"800 !important",
-    paddingBottom:"15px"
   }
 }));

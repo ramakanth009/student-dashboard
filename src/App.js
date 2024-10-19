@@ -4,13 +4,14 @@ import AppRoutes from "./Routes/routes"; // Import the routes
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex",gap:"5px",  }}>
       {/* Sidenav is always visible */}
-      <Sidenav />
-      <div style={{ flexGrow: 1, padding: "20px" }}>
+      
+      <Sidenav style={{position:"fixed"}}/>
+      {/* <div style={{ flexGrow: 1, padding: "20px" }}> */}
         {/* Render the imported routes */}
         <AppRoutes /> 
-      </div>
+      {/* </div> */}
     </div>
   );
 }

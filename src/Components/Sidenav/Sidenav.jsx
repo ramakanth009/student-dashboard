@@ -17,7 +17,7 @@ const Sidenav = () => {
   return (
     <Box className={classes.sidenav}>
       <Avatar
-        sx={{ width: "250px", height: "70px" }}
+        sx={{ width: "230px", height: "70px" }}
         variant="square"
         src={Dashlogo}
       />

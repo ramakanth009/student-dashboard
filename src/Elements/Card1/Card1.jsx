@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { useStyles } from "./Card1.styles";
+import { useStyles } from "./styles";
 import Button1 from "../Button1/button1";
 // import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 

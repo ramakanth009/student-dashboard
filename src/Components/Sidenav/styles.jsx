@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
   sidenav: {
-    width: "250px",
+    width: "230px",
     height: "100vh",
     backgroundColor: "#f0f0f0",
   },
@@ -23,7 +23,7 @@ export const useStyles = makeStyles(() => ({
   sidebottom: {
     display: "flex",
     alignItems: "center",
-    gap:"50px",
+    gap:"20px",
     position:"absolute",
     bottom:"10px",
     padding:"10px 10px 10px 20px"
