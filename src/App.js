@@ -1,6 +1,6 @@
 import "./App.css";
 import Sidenav from "./Components/Sidenav/sidenav";
-import AppRoutes from "./routes/Routes.jsx"; // Import the routes
+import AppRoutes from "./Routes/routes"; // Import the routes
 
 function App() {
   return (
@@ -8,7 +8,8 @@ function App() {
       {/* Sidenav is always visible */}
       <Sidenav />
       <div style={{ flexGrow: 1, padding: "20px" }}>
-        <AppRoutes /> {/* Render the imported routes */}
+        {/* Render the imported routes */}
+        <AppRoutes /> 
       </div>
     </div>
   );

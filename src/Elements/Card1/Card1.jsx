@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { useStyles } from "./Card1.styles";
-import Button1 from "../Button1/Button1";
+import Button1 from "../Button1/button1";
 // import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 
 const Card1 = ({ heading, paragraph, buttonText, topElement }) => {

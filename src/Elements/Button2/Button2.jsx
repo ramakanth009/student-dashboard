@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from './Button2.styles';
+import { useStyles } from './styles';
 import { Box } from '@mui/material';
 
 const Button1 = ({ children, ...props }) => {
