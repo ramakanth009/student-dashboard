@@ -8,7 +8,7 @@ import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
 import LiveHelpRoundedIcon from "@mui/icons-material/LiveHelpRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
-// import Dashlogo from "../../Assets/dashlogo.png";
+import Dashlogo from "../../Assets/dashlogo.webp";
 import { useStyles } from "./styles";
 
 const Sidenav = () => {
@@ -19,7 +19,7 @@ const Sidenav = () => {
       <Avatar
         sx={{ width: "250px", height: "70px" }}
         variant="square"
-        src={''}
+        src={Dashlogo}
       />
       <List>
         <ListItem
