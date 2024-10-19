@@ -1,8 +1,12 @@
 import React from 'react'
+import { Box } from "@mui/material";
+
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <Box>
+      
+    </Box>
   )
 }
 
