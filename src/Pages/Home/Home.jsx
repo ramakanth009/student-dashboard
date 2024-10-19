@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStyles } from './Home.styles'
+import { useStyles } from './styles'
 
 const Home = () => {
     const classes = useStyles();
