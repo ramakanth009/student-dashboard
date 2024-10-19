@@ -1,6 +1,6 @@
 import "./App.css";
-import Sidenav from "./components/Sidenav/sidenav";
-import AppRoutes from "./routes/routes"; // Import the routes
+import Sidenav from "./Components/Sidenav/sidenav";
+import AppRoutes from "./routes/Routes.jsx"; // Import the routes
 
 function App() {
   return (
