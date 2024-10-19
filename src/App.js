@@ -1,17 +1,38 @@
+// import "./App.css";
+// import Sidenav from "./Components/Sidenav/sidenav";
+// import AppRoutes from "./Routes/routes"; // Import the routes
+
+// function App() {
+//   return (
+//     <div style={{ display: "flex",gap:"5px",  }}>
+//       {/* Sidenav is always visible */}
+      
+//       <Sidenav style={{position:"fixed"}}/>
+//       {/* <div style={{ flexGrow: 1, padding: "20px" }}> */}
+//         {/* Render the imported routes */}
+//         <AppRoutes /> 
+//       {/* </div> */}
+//     </div>
+//   );
+// }
+
+// export default App;
 import "./App.css";
 import Sidenav from "./Components/Sidenav/sidenav";
 import AppRoutes from "./Routes/routes"; // Import the routes
 
 function App() {
   return (
-    <div style={{ display: "flex",gap:"5px",  }}>
-      {/* Sidenav is always visible */}
-      
-      <Sidenav style={{position:"fixed"}}/>
-      {/* <div style={{ flexGrow: 1, padding: "20px" }}> */}
-        {/* Render the imported routes */}
-        <AppRoutes /> 
-      {/* </div> */}
+    <div className="app-container">
+      {/* Sidenav will be fixed */}
+      <div className="sidenav-container">
+        <Sidenav />
+      </div>
+
+      {/* Main content area where AppRoutes will be rendered */}
+      <div className="main-content">
+        <AppRoutes />
+      </div>
     </div>
   );
 }

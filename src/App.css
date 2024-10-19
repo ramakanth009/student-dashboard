@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.sidenav-container {
+  width: 230px; /* Fixed width for sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height of the viewport */
+  z-index: 1000; /* Ensures it's always above other content */
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 230px; /* Space to the right of the fixed sidebar */
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling in the main content */
+  width: calc(100vw - 230px); /* Remaining width for the content */
+  height: 100vh; /* Full height for the main content */
+}
