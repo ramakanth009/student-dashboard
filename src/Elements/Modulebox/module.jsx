@@ -1,0 +1,43 @@
+import React from "react";
+import { Box, Typography } from "@mui/material";
+import { useStyles } from "./styles";
+
+const Module = ({ moduleNumber, title, submissionStatus }) => {
+  const classes = useStyles();
+
+  const getStatusStyle = (status) => {
+    switch (status.toLowerCase()) {
+      case "to do":
+        return classes.statusTodo;
+      case "pending":
+        return classes.statusInProgress;
+      case "submitted":
+        return classes.statusSubmitted;
+      default:
+        return classes.statusTodo;
+    }
+  };
+
+  return (
+    <Box className={classes.moduleBox}>
+      <Box className={classes.moduleContent}>
+        <Box className={classes.moduleNumber}>Module: {moduleNumber}</Box>
+        <Box className={classes.modulebox2}>
+          <Typography variant="h5" className={classes.moduleTitle}>
+            {title}
+          </Typography>
+          <Box
+            component="span"
+            className={`${classes.statusChip} ${getStatusStyle(
+              submissionStatus
+            )}`}
+          >
+            {submissionStatus}
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default Module;

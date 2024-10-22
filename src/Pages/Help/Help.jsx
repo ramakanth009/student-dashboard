@@ -96,7 +96,7 @@ const Help = () => {
             For any further inquiries, feel free to reach out to us at <br />
             <span className={classes.mail}>info@sunelearning.com</span>
             <br />
-            Our dedicated team is ready to assist you and will respond within 24
+            Our dedicated team is ready to assist you and will respond within <br/> 24
             hours!
           </Typography>
         </Box>
