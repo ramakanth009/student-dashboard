@@ -33,7 +33,8 @@ const Sidenav = () => {
               backgroundColor: "#eeb015af",
             },
             "&.active": {
-              backgroundColor: "#eeb015af", // Color when active
+              backgroundColor: "#eeb015af", 
+              // Color when active
             },
           }}
         >
@@ -64,7 +65,7 @@ const Sidenav = () => {
         <ListItem
           button
           component={NavLink}
-          to="/curriculum"
+          to="/curriculam"
           sx={{
             padding: "20px 20px",
             "&:hover": {
@@ -120,7 +121,7 @@ const Sidenav = () => {
         </ListItem>
       </List>
       <Box className={classes.sidebottom}>
-        <LightModeRoundedIcon className={classes.bottomlogos} />
+        {/* <LightModeRoundedIcon className={classes.bottomlogos} /> */}
         <Typography
           variant="body2"
           className={classes.logout}

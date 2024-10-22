@@ -24,13 +24,16 @@ skill: {
       padding:"20px"
   },
   box: {
-    width: "calc(33.33% - 20px)", // Adjust width for 3 cards per row
+    width: "calc(33.33% - 20px)", 
+    // Adjust width for 3 cards per row
     marginBottom: "20px",
     "@media (max-width: 960px)": {
-      width: "calc(50% - 20px)", // 2 cards per row on medium screens
+      width: "calc(50% - 20px)", 
+      // 2 cards per row on medium screens
     },
     "@media (max-width: 600px)": {
-      width: "100%", // 1 card per row on small screens
+      width: "100%", 
+      // 1 card per row on small screens
     },
   },
 }));

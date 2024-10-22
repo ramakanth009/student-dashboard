@@ -16,7 +16,8 @@ export const useStyles = makeStyles(() => ({
   },
   sidebuttons: {
     "&.MuiTypography-root": {
-      fontSize: "1.3rem", // Ensure this applies specifically to Typography
+      fontSize: "1.3rem", 
+      // Ensure this applies specifically to Typography
       color: "#555353",
     },
   },
@@ -32,7 +33,8 @@ export const useStyles = makeStyles(() => ({
     display:"flex",
     alignItems:"center",
     "&.MuiTypography-root": {
-      fontSize: "1.6rem", // Ensure this applies specifically to Typography
+      fontSize: "1.6rem", 
+      // Ensure this applies specifically to Typography
       color: "#555353",
     },
   },

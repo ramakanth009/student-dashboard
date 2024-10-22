@@ -10,10 +10,10 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} /> {/* Home Page */}
-      <Route path="/Profile" element={<Profile />} /> {/* Profile Page */}
-      <Route path="/Curriculam" element={<Curriculam />} /> {/* Curriculam Page */}
-      <Route path="/Tasks" element={<Tasks />} /> {/* Tasks Page */}
-      <Route path="/Help" element={<Help />} /> {/* Help Page */}
+      <Route path="/profile" element={<Profile />} /> {/* Profile Page */}
+      <Route path="/curriculam" element={<Curriculam />} /> {/* Curriculam Page */}
+      <Route path="/tasks" element={<Tasks />} /> {/* Tasks Page */}
+      <Route path="/help" element={<Help />} /> {/* Help Page */}
     </Routes>
   );
 };

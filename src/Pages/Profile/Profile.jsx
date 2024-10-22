@@ -1,122 +1,154 @@
-import React, { useState, useEffect } from "react";
-import { Box, Typography, Button, TextField, Avatar } from "@mui/material";
-import EditIcon from "@mui/icons-material/Edit";
+import React, { useState, useEffect } from 'react';
+import { Box, Typography, Button, TextField, Avatar } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import { useStyles } from './styles';
+import Boy from "../../Assets/boy.jpeg"
+import Girl from "../../Assets/girl.webp"
 
-// Default avatars for selection
+
 const avatarOptions = [
-  "avatar1.png", "avatar2.png", "avatar3.png", "avatar4.png"
+  Boy, Girl
 ];
 
+const sections = ['Profile Info', 'Education Details', 'More Details'];
+
+// Helper function to format field labels
+const formatFieldLabel = (field) => {
+  // Special case for CGPA
+  if (field === 'CGPAOrPercentage') return 'CGPA / Percentage';
+  
+  // Handle other cases
+  return field
+    // To add space between camelCase
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    // To Handle consecutive capital letters (acronyms)
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+    // Capitalize first letter of each word
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 const Profile = () => {
-  // Initialize states for profile information
+  const classes = useStyles();
+  const [activeSection, setActiveSection] = useState('Profile Info');
   const [profile, setProfile] = useState({
-    FullName: "Ramakanth Kannuri",
-    Gender: "Male",
-    Email: "ramakanthkannuri@gmail.com",
-    Contact: "+91 0000000000",
-    Whatsapp: "+91 0000000000",
-    FatherName: "-"
+    FullName: 'Ramakanth Kannuri',
+    Gender: 'Male',
+    Email: 'ramakanthkannuri@gmail.com',
+    Contact: '+91 0000000000',
+    Whatsapp: '+91 0000000000',
+    FatherName: '-'
   });
 
-  // Initialize states for education details
   const [education, setEducation] = useState({
-    HighestEducationQualification: "Under Graduation",
-    YearOfGraduation: "",
-    Branch: "",
-    CollegeUniversityName: "",
-    CGPAOrPercentage: "",
-    AdditionalCertificates: ""
+    HighestEducationQualification: 'Under Graduation',
+    YearOfGraduation: '',
+    Branch: '',
+    CollegeUniversityName: '',
+    CGPAOrPercentage: '',
+    AdditionalCertificates: ''
   });
 
-  // Initialize states for more profile information
   const [moreInfo, setMoreInfo] = useState({
-    GitHubEmailID: "ramakanthram014@gmail.com",
-    GithubProfile: "https://github.com/ramakanth009",
-    LinkedInProfileURL: "-",
-    Resume: "-",
-    MaskedResume: "-",
-    AdditionalTechStack: ""
+    GitHubEmailID: 'ramakanthram014@gmail.com',
+    GithubProfile: 'https://github.com/ramakanth009',
+    LinkedInProfileURL: '-',
+    Resume: '-',
+    MaskedResume: '-',
+    AdditionalTechStack: ''
   });
 
-  const [avatar, setAvatar] = useState("avatar1.png");
+  const [avatar, setAvatar] = useState('avatar1.png');
   const [editMode, setEditMode] = useState(null);
   const [showAvatarOptions, setShowAvatarOptions] = useState(false);
 
-  // Load saved data from localStorage
   useEffect(() => {
-    const savedProfile = JSON.parse(localStorage.getItem("profile"));
-    const savedEducation = JSON.parse(localStorage.getItem("education"));
-    const savedMoreInfo = JSON.parse(localStorage.getItem("moreInfo"));
-    const savedAvatar = localStorage.getItem("avatar");
+    const savedProfile = JSON.parse(localStorage.getItem('profile'));
+    const savedEducation = JSON.parse(localStorage.getItem('education'));
+    const savedMoreInfo = JSON.parse(localStorage.getItem('moreInfo'));
+    const savedAvatar = localStorage.getItem('avatar');
+    
     if (savedProfile) setProfile(savedProfile);
     if (savedEducation) setEducation(savedEducation);
     if (savedMoreInfo) setMoreInfo(savedMoreInfo);
     if (savedAvatar) setAvatar(savedAvatar);
   }, []);
 
-  // Save data to localStorage
   const saveToLocalStorage = () => {
-    localStorage.setItem("profile", JSON.stringify(profile));
-    localStorage.setItem("education", JSON.stringify(education));
-    localStorage.setItem("moreInfo", JSON.stringify(moreInfo));
-    localStorage.setItem("avatar", avatar);
+    localStorage.setItem('profile', JSON.stringify(profile));
+    localStorage.setItem('education', JSON.stringify(education));
+    localStorage.setItem('moreInfo', JSON.stringify(moreInfo));
+    localStorage.setItem('avatar', avatar);
   };
 
-  // Handle edit save for each field
   const handleEditSave = (field, section) => {
     setEditMode(null);
     saveToLocalStorage();
   };
 
-  // Handle avatar selection
   const selectAvatar = (selectedAvatar) => {
     setAvatar(selectedAvatar);
     setShowAvatarOptions(false);
     saveToLocalStorage();
   };
 
-  // Render editable fields
   const renderEditableFields = (data, setData, section) => {
-    return Object.keys(data).map((field) => (
-      <Box key={`${section}-${field}`} sx={{ marginBottom: 2 }}>
-        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-          {field.replace(/([A-Z])/g, " $1")}:
+    return Object.entries(data).map(([field, value]) => (
+      <Box key={`${section}-${field}`} className={classes.fieldContainer}>
+        <Typography className={classes.label}>
+          {formatFieldLabel(field)}:
         </Typography>
-        {editMode === `${section}-${field}` ? (
-          <TextField
-            value={data[field]}
-            onChange={(e) =>
-              setData({ ...data, [field]: e.target.value })
-            }
-            onBlur={() => handleEditSave(field, section)}
-            autoFocus
-            fullWidth
-          />
-        ) : (
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Typography variant="body2">{data[field]}</Typography>
-            <Button
+        <Box className={classes.value}>
+          {editMode === `${section}-${field}` ? (
+            <TextField
+              value={value}
+              onChange={(e) => setData({ ...data, [field]: e.target.value })}
+              onBlur={() => handleEditSave(field, section)}
+              autoFocus
               size="small"
-              startIcon={<EditIcon />}
-              onClick={() => setEditMode(`${section}-${field}`)}
-            >
-              Edit
-            </Button>
-          </Box>
-        )}
+            />
+          ) : (
+            <>
+              <Typography>{value}</Typography>
+              <Button
+                className={classes.editButton}
+                size="small"
+                startIcon={<EditIcon />}
+                onClick={() => setEditMode(`${section}-${field}`)}
+              >
+                Edit
+              </Button>
+            </>
+          )}
+        </Box>
       </Box>
     ));
   };
 
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'Profile Info':
+        return renderEditableFields(profile, setProfile, 'profile');
+      case 'Education Details':
+        return renderEditableFields(education, setEducation, 'education');
+      case 'More Details':
+        return renderEditableFields(moreInfo, setMoreInfo, 'moreInfo');
+      default:
+        return null;
+    }
+  };
+
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 2 }}>
-      <Box sx={{ display: "flex", gap: 2 }}>
-        {/* Avatar Section */}
-        <Box sx={{ textAlign: "center" }}>
+    <Box className={classes.container}>
+      {/* Left Panel */}
+      <Box className={classes.leftPanel}>
+        <Box className={classes.avatarSection}>
           <Avatar
             src={avatar}
             alt="User Avatar"
-            sx={{ width: 100, height: 100, margin: "0 auto" }}
+            className={classes.avatar}
+            onClick={() => setShowAvatarOptions(!showAvatarOptions)}
           />
           <Button
             startIcon={<EditIcon />}
@@ -126,50 +158,35 @@ const Profile = () => {
           </Button>
 
           {showAvatarOptions && (
-            <Box sx={{ 
-              display: 'flex', 
-              flexWrap: 'wrap', 
-              gap: 1, 
-              justifyContent: 'center', 
-              marginTop: 2 
-            }}>
+            <Box className={classes.avatarGrid}>
               {avatarOptions.map((option, index) => (
                 <Avatar
                   key={index}
                   src={option}
                   alt={`avatar-${index}`}
-                  sx={{ 
-                    cursor: "pointer", 
-                    width: 50, 
-                    height: 50,
-                    '&:hover': {
-                      boxShadow: '0 0 0 2px #1976d2',
-                    },
-                  }}
+                  className={classes.avatarOption}
                   onClick={() => selectAvatar(option)}
                 />
               ))}
             </Box>
           )}
         </Box>
+      </Box>
 
-        {/* Profile Information Section */}
-        <Box sx={{ flexGrow: 1 }}>
-          <Typography variant="h6" sx={{ marginBottom: 2 }}>Profile Information</Typography>
-          {renderEditableFields(profile, setProfile, 'profile')}
+      {/* Right Panel */}
+      <Box className={classes.rightPanel}>
+        <Box className={classes.navigationTabs}>
+          {sections.map((section) => (
+            <Typography
+              key={section}
+              className={`${classes.navTab} ${activeSection === section ? 'active' : ''}`}
+              onClick={() => setActiveSection(section)}
+            >
+              {section}
+            </Typography>
+          ))}
         </Box>
-      </Box>
-
-      {/* Education Details Section */}
-      <Box>
-        <Typography variant="h6" sx={{ marginBottom: 2 }}>Education Details</Typography>
-        {renderEditableFields(education, setEducation, 'education')}
-      </Box>
-
-      {/* More Profile Information Section */}
-      <Box>
-        <Typography variant="h6" sx={{ marginBottom: 2 }}>More Profile Information</Typography>
-        {renderEditableFields(moreInfo, setMoreInfo, 'moreInfo')}
+        <Box>{renderContent()}</Box>
       </Box>
     </Box>
   );
