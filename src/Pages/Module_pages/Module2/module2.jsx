@@ -1,9 +1,9 @@
 import React from 'react'
 
-const module2 = () => {
+const Module2 = () => {
   return (
     <div>module2</div>
   )
 }
 
-export default module2
+export default Module2

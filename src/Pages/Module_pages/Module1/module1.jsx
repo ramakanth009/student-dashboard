@@ -1,13 +1,9 @@
-// ../Pages/Module_pages/Module1/module1.js
-import React from 'react';
+import React from 'react'
 
-const ModuleDetail1 = () => {
+const Module1 = () => {
   return (
-    <div>
-      <h1>Module 1 Details</h1>
-      <p>This is the content for Module 1.</p>
-    </div>
-  );
-};
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, minima! Molestiae cupiditate quibusdam officia voluptas amet provident, accusantium possimus tempora voluptate distinctio quisquam asperiores dolores praesentium consequuntur modi, excepturi suscipit soluta hic! Magnam, eos odit? Magnam vitae magni laboriosam eum? Consequuntur nesciunt modi exercitationem! Sunt, iure totam? Accusantium sapiente ipsa incidunt doloribus explicabo quisquam nisi illo iure nam expedita! Facere officiis laboriosam maiores nobis aliquid. Dicta, at odio! Quo eius amet blanditiis. Inventore velit eveniet soluta, aperiam placeat tenetur, porro modi facilis amet a veritatis cum, maxime officiis illo molestiae?</div>
+  )
+}
 
-export default ModuleDetail1;
+export default Module1
