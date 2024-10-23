@@ -1,9 +1,54 @@
-import React from 'react'
+// Module1.jsx
+import React from 'react';
+import { Box, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { useStyles } from './styles';
 
 const Module1 = () => {
-  return (
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, minima! Molestiae cupiditate quibusdam officia voluptas amet provident, accusantium possimus tempora voluptate distinctio quisquam asperiores dolores praesentium consequuntur modi, excepturi suscipit soluta hic! Magnam, eos odit? Magnam vitae magni laboriosam eum? Consequuntur nesciunt modi exercitationem! Sunt, iure totam? Accusantium sapiente ipsa incidunt doloribus explicabo quisquam nisi illo iure nam expedita! Facere officiis laboriosam maiores nobis aliquid. Dicta, at odio! Quo eius amet blanditiis. Inventore velit eveniet soluta, aperiam placeat tenetur, porro modi facilis amet a veritatis cum, maxime officiis illo molestiae?</div>
-  )
-}
+  const classes = useStyles();
+  const navigate = useNavigate();
 
-export default Module1
+  return (
+    <Box className={classes.moduleContainer}>
+      <Box className={classes.moduleHeader}>
+        <Button onClick={() => navigate('/curriculam')} className={classes.backButton}>
+          Back to Curriculum
+        </Button>
+        <Typography variant="h4" className={classes.moduleTitle}>
+          Introduction to Programming
+        </Typography>
+      </Box>
+      
+      <Box className={classes.moduleContent}>
+        <Typography variant="h5" gutterBottom>
+          Course Overview
+        </Typography>
+        <Typography paragraph>
+          This module introduces you to the fundamental concepts of programming. You'll learn about:
+        </Typography>
+        <ul>
+          <li>Basic programming concepts</li>
+          <li>Variables and data types</li>
+          <li>Control structures</li>
+          <li>Functions and procedures</li>
+          <li>Basic algorithms</li>
+        </ul>
+
+        <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
+          Learning Objectives
+        </Typography>
+        <Typography paragraph>
+          By the end of this module, you will be able to:
+        </Typography>
+        <ul>
+          <li>Understand basic programming concepts</li>
+          <li>Write simple programs</li>
+          <li>Debug basic code</li>
+          <li>Implement basic algorithms</li>
+        </ul>
+      </Box>
+    </Box>
+  );
+};
+
+export default Module1;
