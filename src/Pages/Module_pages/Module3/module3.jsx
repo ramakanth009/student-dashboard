@@ -20,48 +20,52 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module3 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Introduction to Web",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
-    },
-    {
-      title: "1.2 Linear Data Structures",
-      status: "In Progress",
-      videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Overview of Web And Mobile application",
+        "Client vs Server Applications",
+        "Web Design Patterns and Architecture",
+        "Course Overview",
+        "HTML Validations",
       ],
     },
     {
-      title: "3 Dynamic Programming",
+      title: "2 HTML5 Core Concepts",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
+      topics: ["HTML5 Tags Overview", "HTML5 Elements"],
+    },
+    {
+      title: "1 HTML5 Forms",
       status: "To Do",
       videoUrl: "https://example.com/video3",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "What is Form and its Significance in HTML ",
+        "Form Tag and its attributes",
+        "Different input types of Form Elements",
+        "Types of attributes using in Form",
+        "Form Action items",
+        "DOM Manupilations",
+      ],
+    },
+    {
+      title: "3 HTML Important Tags",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "Web Page Layout Tags",
+        "Doc Type",
+        "Meta tags",
+        "Text Tags",
+        "Links and Anchor Tags",
       ],
     },
   ];
@@ -73,9 +77,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module3" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          HTML
         </Typography>
       </Box>
 
@@ -95,4 +99,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module3;

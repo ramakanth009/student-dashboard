@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module9 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -73,7 +73,7 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module9" />
         <Typography variant="h4" className={classes.moduleTitle}>
           Introduction To Data Structures
         </Typography>
@@ -95,4 +95,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module9;

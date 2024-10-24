@@ -20,48 +20,85 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module12 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Nodejs",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
-    },
-    {
-      title: "1.2 Linear Data Structures",
-      status: "In Progress",
-      videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Introduction to Nodejs and Installation",
+        "Asynchronous and Non blocking Nature",
+        "Folder Structure",
+        "Nodejs Modules",
       ],
     },
     {
-      title: "3 Dynamic Programming",
+      title: "2 Nodejs",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
+      topics: [
+        "Modules vs Packages",
+        "NPM(Node Package Manager)",
+        "core modules and User Defined Modules",
+        "Exports and Imports",
+      ],
+    },
+    {
+      title: "3 Nodejs",
       status: "To Do",
       videoUrl: "https://example.com/video3",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "File System- fs module",
+        "Creation of Server and Printing Helloworld",
+        "Rendering Already build frontend web application on this server",
+      ],
+    },
+    {
+      title: "4 Expressjs",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "Introduction to Expressjs",
+        "MVC Architecture",
+        "Router",
+        "Middleware",
+      ],
+    },
+    {
+      title: "5 Expressjs",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "HTTP Methods",
+        "Response and Request Object",
+        "RestFull API Development",
+        "Creating Dynamic Routes",
+      ],
+    },
+    {
+      title: "6 Expressjs",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "JSON Data",
+        "Authorization (JWT Token majorly)",
+        "Authentication",
+        "API documentation",
+      ],
+    },
+    {
+      title: "7 Expressjs",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "Serialization and De-Serialization",
+        "CORS Policy",
+        "SOLID Principles",
+        "Designe Patterns and atleast 1 pattern",
       ],
     },
   ];
@@ -73,9 +110,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module12" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          Intro to Node.js and Express.js
         </Typography>
       </Box>
 
@@ -95,4 +132,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module12;

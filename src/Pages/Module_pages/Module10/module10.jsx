@@ -20,48 +20,54 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module10 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Introduction to Java Fundamentals",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
-    },
-    {
-      title: "1.2 Linear Data Structures",
-      status: "In Progress",
-      videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Data Types, Variables & Operators",
+        "Reading Input & Formatting Output",
+        "Conditions & Loops",
+        "Arrays",
+        "Java Collections",
       ],
     },
     {
-      title: "3 Dynamic Programming",
+      title: "2 OOP with Java",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
+      topics: [
+        "Classes & Objects",
+        "Attributes & Methods (Instance, Static, Class)",
+        "Abstraction",
+        "Inheritance",
+      ],
+    },
+    {
+      title: "3 OOP with Java",
       status: "To Do",
       videoUrl: "https://example.com/video3",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "Public, Private, Protected Scopes",
+        "Encapsulation",
+        "Method Overloading & Overriding",
+        "Interfaces",
+      ],
+    },
+    {
+      title: "4 OOP with Java",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: [
+        "Polymorphism",
+        "Generics & Exceptions",
+        "Multi-threading",
+        "Important Design Patterns",
       ],
     },
   ];
@@ -73,9 +79,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module10" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          Introduction to Server-side Programming
         </Typography>
       </Box>
 
@@ -95,4 +101,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module10;

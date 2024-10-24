@@ -41,26 +41,36 @@ const Curriculum = () => {
     },
     {
       moduleNumber: 8,
-      title: "Introduction to Server-side Programming (Back-end Module)",
+      title: "Introduction to Programming",
       submissionStatus: "To do"
     },
     {
       moduleNumber: 9,
-      title: "Intro to Spring Framework",
-      submissionStatus: "To do"
+      title: "Introduction to Data Structures",
+      submissionStatus: "Pending"
     },
     {
       moduleNumber: 10,
-      title: "Intro to Nodejs and Express js",
+      title: "Introduction to Server-side Programming (Back-end Module)",
       submissionStatus: "To do"
     },
     {
       moduleNumber: 11,
-      title: "Python & PHP for backend",
+      title: "Intro to Spring Framework",
       submissionStatus: "To do"
     },
     {
       moduleNumber: 12,
+      title: "Intro to Node.js and Express.js",
+      submissionStatus: "To do"
+    },
+    {
+      moduleNumber: 13,
+      title: "Python & PHP for backend",
+      submissionStatus: "To do"
+    },
+    {
+      moduleNumber: 14,
       title: "Databases",
       submissionStatus: "To do"
     }

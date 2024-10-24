@@ -20,49 +20,64 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module4 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Introduction & Selectors",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
+      topics: [
+        "What is CSS",
+        "Client vs Server Applications",
+        "Web Design Patterns and Architecture",
+        "Course Overview",
+        "HTML Validations",
+      ],
     },
     {
-      title: "1.2 Linear Data Structures",
+      title: "2 CSS Layout & Design",
       status: "In Progress",
       videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Background - colour, images and transparency properties",
+        "Fonts, Colour and Text Properties",
+        "Box Model - Box, Inline and inline-block",
+        "Padding, Border and Margin Properties",
       ],
     },
     {
-      title: "3 Dynamic Programming",
+      title: "3 CSS Layout & Design",
       status: "To Do",
       videoUrl: "https://example.com/video3",
+      topics: ["Positioning- Float and Display", "Flexbox and properties"],
+    },
+    {
+      title: "4 Responsive CSS",
+      status: "Completed",
+      videoUrl: "https://example.com/video1",
+      topics: ["Media Queries", "Grid"],
+    },
+    {
+      title: "5 Animations",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "CSS Animation",
+        "Transitions",
+        "Transformations",
+        "CSS traversing",
+        "pseudo classes",
+        "child & siblling techniques",
       ],
+    },
+    {
+      title: "6 Mastering CSS Variables, SCSS/LESS & Advanced Styling",
+      status: "To Do",
+      videoUrl: "https://example.com/video3",
+      topics: ["Positioning- Float and Display", "Flexbox and properties"],
     },
   ];
 
@@ -73,9 +88,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module4" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          CSS
         </Typography>
       </Box>
 
@@ -95,4 +110,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module4;

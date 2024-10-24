@@ -20,48 +20,30 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module13 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Python",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
-    },
-    {
-      title: "1.2 Linear Data Structures",
-      status: "In Progress",
-      videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Introduction to Python",
+        "Flask Framework",
+        "Django Framework",
+        "RESTful API Development",
       ],
     },
     {
-      title: "3 Dynamic Programming",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
+      title: "2 PHP",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "Introduction to PHP",
+        "PHP Frameworks (Laravel, CodeIgniter)",
+        "RESTful API Development",
       ],
     },
   ];
@@ -73,9 +55,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module13" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          Python & PHP for backend
         </Typography>
       </Box>
 
@@ -95,4 +77,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module13;

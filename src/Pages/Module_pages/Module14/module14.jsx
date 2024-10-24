@@ -20,50 +20,28 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module14 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1  Relational Databases & SQL",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
+      topics: [" Relational Databases", "Introduction to SQL", "Introduction to MySQL"],
     },
     {
-      title: "1.2 Linear Data Structures",
+      title: "2 PostgreSQL, NoSQL, MongoDB ",
       status: "In Progress",
       videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Introduction to PostgreSQL",
+        "Introduction to NoSQL Databases",
+        "Introduction to MongoDB",
       ],
     },
-    {
-      title: "3 Dynamic Programming",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
-      ],
-    },
+    
   ];
 
   const handleAccordionChange = (index) => {
@@ -73,9 +51,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module14" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          Introduction to Databases
         </Typography>
       </Box>
 
@@ -95,4 +73,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module14;

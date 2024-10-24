@@ -20,48 +20,55 @@ const useStyles = makeStyles({
   },
 });
 
-const Module2= () => {
+const Module5 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const sections = [
     {
-      title: "1.1 Object-Oriented Programming",
+      title: "1 Bootstrap layout",
       status: "Completed",
       videoUrl: "https://example.com/video1",
-      topics: ["Basics of OOP", "Advance concepts OOP"],
-    },
-    {
-      title: "1.2 Linear Data Structures",
-      status: "In Progress",
-      videoUrl: "https://example.com/video2",
-      topics: ["Linked lists", "Stacks and Queues"],
-    },
-    {
-      title: "1.3 Trees",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
-      topics: ["Generic Trees", "Binary Trees ", "Binary Search Trees"],
-    },
-    {
-      title: "2 Advanced Data Structures",
-      status: "To Do",
-      videoUrl: "https://example.com/video3",
       topics: [
-        "Time Complexity",
-        "Priority Queues",
-        "Hashmaps",
-        "Tries",
-        "Graphs",
+        "Install or adding Bootstrap via Cdn link",
+        "Layouts and Components",
+        "XS, S, M, L, XL, and XXL design Specification",
+        "Containers",
+        "Gutter",
+        "Margin and Paddings",
+        "Background and color",
+        "Display",
+        "Float",
       ],
     },
     {
-      title: "3 Dynamic Programming",
+      title: "2 Advance Properties",
+      status: "In Progress",
+      videoUrl: "https://example.com/video2",
+      topics: [
+        "Bootstrap Typography, Navbars, button enhancements",
+        "Position",
+        "Direction",
+        "justify-content",
+        "align-items",
+        "flex-fill",
+        "flex grow & shrink",
+        "Popularity and Alternatives of Bootstrap",
+        "Bootstrap Documentation",
+      ],
+    },
+    {
+      title:
+        "3 Bootstrap layout Advance Properties Advanced Bootstrap Control Techniques and Best Practices",
       status: "To Do",
       videoUrl: "https://example.com/video3",
       topics: [
-        "Introduction to Dynamic Programming",
-        "Applications of Dynamic",
+        "Bootstrap controls size properties",
+        "Control behavioral changes if any scenario can be covered",
+        "Server enabled controls like dynamic data bind with backend data",
+        "Proper error message representations",
+        "Toaters, Models, paginated grids",
+        "Server response binded grids",
       ],
     },
   ];
@@ -73,9 +80,9 @@ const Module2= () => {
   return (
     <Box className={classes.moduleContainer}>
       <Box className={classes.header}>
-        <ModuleSwitcher currentModule="/curriculam/module2" />
+        <ModuleSwitcher currentModule="/curriculam/module5" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          Introduction To Data Structures
+          Bootstrap
         </Typography>
       </Box>
 
@@ -95,4 +102,4 @@ const Module2= () => {
   );
 };
 
-export default Module2;
+export default Module5;

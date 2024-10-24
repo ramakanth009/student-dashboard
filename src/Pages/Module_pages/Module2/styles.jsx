@@ -30,10 +30,12 @@ export const useStyles = makeStyles({
   backButton: {
     alignSelf: 'flex-start!important',
     marginBottom: '16px!important',
-    backgroundColor: '#1976d2!important',
-    color: 'white!important',
+    // backgroundColor: '#1976d2!important',
+    color: '#000000!important',
+    border:"1px solid #000000",
     '&:hover': {
-      backgroundColor: '#1565c0!important',
+      // backgroundColor: '#1565c0!important',
+      color: '#1565c0!important',
     }
   }
 });
