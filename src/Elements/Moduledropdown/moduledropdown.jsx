@@ -7,6 +7,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   moduleBox: {
+    width:"100%",
     backgroundColor: '#fff',
     borderRadius: '20px',
     marginBottom: '16px',
@@ -15,9 +16,9 @@ const useStyles = makeStyles({
     '&.MuiAccordion-root': {
       borderRadius: '0px 30px 0px 30px',  
     },
-    // '&.MuiPaper-root': {
-    //   borderRadius: '20px', 
-    // },
+    '&.MuiPaper-root': {
+      borderRadius: '0px 30px 0px 30px !important', 
+    },
 
     '&:hover': {
       transform: 'translateY(-2px)',

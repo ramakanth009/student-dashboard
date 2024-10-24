@@ -3,12 +3,19 @@ import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ModuleDropdown from "../../../Elements/Moduledropdown/moduledropdown";
 import ModuleSwitcher from "../../../Elements/Moduleselector/moduleselector";
-
+import ModuleDescription from "../../../Elements/Moduledescription/moduledescription";
 const useStyles = makeStyles({
   moduleContainer: {
+    width:"100%",
     padding: "24px",
-    backgroundColor: "#f5f5f5",
+    // backgroundColor: "#f5f5f5",
     minHeight: "100vh",
+    display: "flex",
+    flexDirection:"column"
+  },
+  content:{
+    display:"flex",
+    gap:"10px"
   },
   header: {
     marginBottom: "24px",
@@ -18,9 +25,13 @@ const useStyles = makeStyles({
     fontWeight: "500!important",
     marginBottom: "24px!important",
   },
+  contentWrapper:{
+    width:"100%",
+    padding:"0px 20px"
+  }
 });
 
-const Module2= () => {
+const Module2 = () => {
   const classes = useStyles();
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -66,6 +77,28 @@ const Module2= () => {
     },
   ];
 
+  const moduleDescription = {
+    title: "Introduction to Data Structures",
+    subtitle: "Organize and manipulate data effectively",
+    description:
+      "This module provides an introduction to data structures, helping you understand how data can be efficiently organized and accessed. You'll cover arrays, lists, stacks, and queues in depth.",
+    learningOutcomes: [
+      "Understand the importance of data structures in programming",
+      "Learn about basic data structures such as arrays and linked lists",
+      "Implement and use stacks, queues, and other fundamental structures",
+      "Analyze the time and space complexity of different structures",
+      "Solve problems using appropriate data structures",
+    ],
+    prerequisites: [
+      "Introduction to Programming",
+      "Basic understanding of algorithms",
+    ],
+    duration: "4 weeks",
+    skillLevel: "Beginner",
+    highlightText:
+      "Upon completion, you'll be able to implement and work with essential data structures for more efficient problem solving.",
+  };
+
   const handleAccordionChange = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
@@ -79,18 +112,26 @@ const Module2= () => {
         </Typography>
       </Box>
 
-      {sections.map((section, index) => (
-        <ModuleDropdown
-          key={index}
-          index={index}
-          title={section.title}
-          status={section.status}
-          topics={section.topics}
-          videoUrl={section.videoUrl}
-          expanded={expandedIndex === index}
-          onChange={handleAccordionChange}
-        />
-      ))}
+      <Box className={classes.content}>
+        <ModuleDescription moduleData={moduleDescription} />
+
+        <Box className={classes.contentWrapper}>
+          <Box className={classes.dropdownSection}>
+            {sections.map((section, index) => (
+              <ModuleDropdown
+                key={index}
+                index={index}
+                title={section.title}
+                status={section.status}
+                topics={section.topics}
+                videoUrl={section.videoUrl}
+                expanded={expandedIndex === index}
+                onChange={handleAccordionChange}
+              />
+            ))}
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };

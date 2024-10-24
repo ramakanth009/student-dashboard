@@ -19,18 +19,17 @@
 // export default App;
 import "./App.css";
 import Sidenav from "./Components/Sidenav/sidenav";
-import AppRoutes from "./Routes/routes"; // Import the routes
+import AppRoutes from "./Routes/routes";
+// import QuestionVaultBot  from "./Bot/bot";
 
 function App() {
   return (
     <div className="app-container">
-      {/* Sidenav will be fixed */}
       <div className="sidenav-container">
         <Sidenav />
       </div>
-
-      {/* Main content area where AppRoutes will be rendered */}
       <div className="main-content">
+        {/* <QuestionVaultBot />  */}
         <AppRoutes />
       </div>
     </div>
