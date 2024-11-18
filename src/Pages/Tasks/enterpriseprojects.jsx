@@ -1,14 +1,3 @@
-// Import this component in your Tasks.jsx and update the right section like this:
-/*
-import EnterpriseProjects from './EnterpriseProjects';
-
-// In your Tasks component, update the right section:
-<Box className={classes.section}>
-  <EnterpriseProjects />
-</Box>
-*/
-
-// EnterpriseProjects.jsx
 import React from 'react';
 import { Box, Typography, Card, CardContent, Chip, IconButton, Tooltip } from '@mui/material';
 import { makeStyles } from '@mui/styles';

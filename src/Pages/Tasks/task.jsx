@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useStyles } from "./styles";
-// import EnterpriseProjects from "./EnterpriseProjects";
+import EnterpriseProjects from "./enterpriseprojects";
 
 //Tasks data
 const mockTasks = [
@@ -422,8 +422,7 @@ const Tasks = () => {
         {tasks.map((task) => renderTask(task))}
       </Box>
       <Box className={classes.section}>
-      <Typography variant="h5">Additional Content</Typography>
-        {/* <EnterpriseProjects /> */}
+        <EnterpriseProjects />
       </Box>
     </Box>
   );
