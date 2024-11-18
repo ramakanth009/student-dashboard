@@ -1,0 +1,525 @@
+// Color variations for #00a1ff
+
+const colorVariations = {
+  // Full opacity
+  100: {
+    rgba: 'rgba(0, 161, 255, 1)',
+    hex: '#00a1ff'
+  },
+  // 90% opacity
+  90: {
+    rgba: 'rgba(0, 161, 255, 0.9)',
+    hex: '#1aabff'
+  },
+  // 80% opacity
+  80: {
+    rgba: 'rgba(0, 161, 255, 0.8)',
+    hex: '#33b4ff'
+  },
+  // 70% opacity
+  70: {
+    rgba: 'rgba(0, 161, 255, 0.7)',
+    hex: '#4dbdff'
+  },
+  // 60% opacity
+  60: {
+    rgba: 'rgba(0, 161, 255, 0.6)',
+    hex: '#66c7ff'
+  },
+  // 50% opacity
+  50: {
+    rgba: 'rgba(0, 161, 255, 0.5)',
+    hex: '#80d0ff'
+  },
+  // 40% opacity
+  40: {
+    rgba: 'rgba(0, 161, 255, 0.4)',
+    hex: '#99d9ff'
+  },
+  // 30% opacity
+  30: {
+    rgba: 'rgba(0, 161, 255, 0.3)',
+    hex: '#b3e3ff'
+  },
+  // 20% opacity
+  20: {
+    rgba: 'rgba(0, 161, 255, 0.2)',
+    hex: '#ccecff'
+  },
+  // 10% opacity
+  10: {
+    rgba: 'rgba(0, 161, 255, 0.1)',
+    hex: '#e6f6ff'
+  },
+  // 5% opacity
+  5: {
+    rgba: 'rgba(0, 161, 255, 0.05)',
+    hex: '#f2faff'
+  }
+};
+
+// Common use cases:
+const colorUsage = {
+  primary: colorVariations[100],          // Main brand color
+  hover: colorVariations[90],             // Hover state
+  active: colorVariations[80],            // Active/pressed state
+  disabled: colorVariations[60],          // Disabled state
+  background: colorVariations[10],        // Light background
+  backgroundHover: colorVariations[20],   // Background hover
+  border: colorVariations[30],            // Border color
+  shadow: colorVariations[20],            // Box shadow color
+  text: colorVariations[90],              // Text color
+  lightText: colorVariations[50]          // Secondary text
+};
+
+
+// Color variations for #008000
+
+const greenColorVariations = {
+    // Full opacity
+    100: {
+      rgba: 'rgba(0, 128, 0, 1)',
+      hex: '#008000'
+    },
+    // 90% opacity
+    90: {
+      rgba: 'rgba(0, 128, 0, 0.9)',
+      hex: '#198d19'
+    },
+    // 80% opacity
+    80: {
+      rgba: 'rgba(0, 128, 0, 0.8)',
+      hex: '#339933'
+    },
+    // 70% opacity
+    70: {
+      rgba: 'rgba(0, 128, 0, 0.7)',
+      hex: '#4da64d'
+    },
+    // 60% opacity
+    60: {
+      rgba: 'rgba(0, 128, 0, 0.6)',
+      hex: '#66b266'
+    },
+    // 50% opacity
+    50: {
+      rgba: 'rgba(0, 128, 0, 0.5)',
+      hex: '#80bf80'
+    },
+    // 40% opacity
+    40: {
+      rgba: 'rgba(0, 128, 0, 0.4)',
+      hex: '#99cc99'
+    },
+    // 30% opacity
+    30: {
+      rgba: 'rgba(0, 128, 0, 0.3)',
+      hex: '#b3d9b3'
+    },
+    // 20% opacity
+    20: {
+      rgba: 'rgba(0, 128, 0, 0.2)',
+      hex: '#cce6cc'
+    },
+    // 10% opacity
+    10: {
+      rgba: 'rgba(0, 128, 0, 0.1)',
+      hex: '#e6f2e6'
+    },
+    // 5% opacity
+    5: {
+      rgba: 'rgba(0, 128, 0, 0.05)',
+      hex: '#f2f9f2'
+    }
+  };
+  
+  // Common use cases:
+  const greenColorUsage = {
+    primary: greenColorVariations[100],          // Main green color
+    hover: greenColorVariations[90],             // Hover state
+    active: greenColorVariations[80],            // Active/pressed state
+    disabled: greenColorVariations[60],          // Disabled state
+    background: greenColorVariations[10],        // Light background
+    backgroundHover: greenColorVariations[20],   // Background hover
+    border: greenColorVariations[30],            // Border color
+    shadow: greenColorVariations[20],            // Box shadow color
+    text: greenColorVariations[90],              // Text color
+    lightText: greenColorVariations[50]          // Secondary text
+  };
+
+  // Color variations for #FF0000
+
+const redColorVariations = {
+    // Full opacity
+    100: {
+      rgba: 'rgba(255, 0, 0, 1)',
+      hex: '#FF0000'
+    },
+    // 90% opacity
+    90: {
+      rgba: 'rgba(255, 0, 0, 0.9)',
+      hex: '#ff1a1a'
+    },
+    // 80% opacity
+    80: {
+      rgba: 'rgba(255, 0, 0, 0.8)',
+      hex: '#ff3333'
+    },
+    // 70% opacity
+    70: {
+      rgba: 'rgba(255, 0, 0, 0.7)',
+      hex: '#ff4d4d'
+    },
+    // 60% opacity
+    60: {
+      rgba: 'rgba(255, 0, 0, 0.6)',
+      hex: '#ff6666'
+    },
+    // 50% opacity
+    50: {
+      rgba: 'rgba(255, 0, 0, 0.5)',
+      hex: '#ff8080'
+    },
+    // 40% opacity
+    40: {
+      rgba: 'rgba(255, 0, 0, 0.4)',
+      hex: '#ff9999'
+    },
+    // 30% opacity
+    30: {
+      rgba: 'rgba(255, 0, 0, 0.3)',
+      hex: '#ffb3b3'
+    },
+    // 20% opacity
+    20: {
+      rgba: 'rgba(255, 0, 0, 0.2)',
+      hex: '#ffcccc'
+    },
+    // 10% opacity
+    10: {
+      rgba: 'rgba(255, 0, 0, 0.1)',
+      hex: '#ffe6e6'
+    },
+    // 5% opacity
+    5: {
+      rgba: 'rgba(255, 0, 0, 0.05)',
+      hex: '#fff2f2'
+    }
+  };
+  
+  // Common use cases:
+  const redColorUsage = {
+    primary: redColorVariations[100],          // Main red color (errors, alerts)
+    hover: redColorVariations[90],             // Hover state
+    active: redColorVariations[80],            // Active/pressed state
+    disabled: redColorVariations[60],          // Disabled state
+    background: redColorVariations[10],        // Light error background
+    backgroundHover: redColorVariations[20],   // Error background hover
+    border: redColorVariations[30],            // Error border color
+    shadow: redColorVariations[20],            // Error box shadow
+    text: redColorVariations[90],              // Error text
+    lightText: redColorVariations[50],         // Secondary error text
+    warning: redColorVariations[20],           // Warning background
+    error: {
+      light: redColorVariations[10],           // Error light background
+      medium: redColorVariations[50],          // Error medium emphasis
+      dark: redColorVariations[100]            // Error high emphasis
+    }
+  };
+
+  // Color variations for #D32F2F (Material Design Red)
+
+const materialRedVariations = {
+    // Full opacity
+    100: {
+      rgba: 'rgba(211, 47, 47, 1)',
+      hex: '#D32F2F'
+    },
+    // 90% opacity
+    90: {
+      rgba: 'rgba(211, 47, 47, 0.9)',
+      hex: '#d74444'
+    },
+    // 80% opacity
+    80: {
+      rgba: 'rgba(211, 47, 47, 0.8)',
+      hex: '#dc5959'
+    },
+    // 70% opacity
+    70: {
+      rgba: 'rgba(211, 47, 47, 0.7)',
+      hex: '#e06e6e'
+    },
+    // 60% opacity
+    60: {
+      rgba: 'rgba(211, 47, 47, 0.6)',
+      hex: '#e48383'
+    },
+    // 50% opacity
+    50: {
+      rgba: 'rgba(211, 47, 47, 0.5)',
+      hex: '#e99797'
+    },
+    // 40% opacity
+    40: {
+      rgba: 'rgba(211, 47, 47, 0.4)',
+      hex: '#edacac'
+    },
+    // 30% opacity
+    30: {
+      rgba: 'rgba(211, 47, 47, 0.3)',
+      hex: '#f1c1c1'
+    },
+    // 20% opacity
+    20: {
+      rgba: 'rgba(211, 47, 47, 0.2)',
+      hex: '#f6d5d5'
+    },
+    // 10% opacity
+    10: {
+      rgba: 'rgba(211, 47, 47, 0.1)',
+      hex: '#faeaea'
+    },
+    // 5% opacity
+    5: {
+      rgba: 'rgba(211, 47, 47, 0.05)',
+      hex: '#fcf5f5'
+    }
+  };
+  
+  // Common use cases for Material Design:
+  const materialRedUsage = {
+    primary: materialRedVariations[100],          // Main error color
+    hover: materialRedVariations[90],             // Hover state
+    active: materialRedVariations[80],            // Active/pressed state
+    disabled: materialRedVariations[60],          // Disabled state
+    background: materialRedVariations[10],        // Light error background
+    backgroundHover: materialRedVariations[20],   // Error background hover
+    border: materialRedVariations[30],            // Error border color
+    shadow: materialRedVariations[20],            // Error box shadow
+    text: materialRedVariations[90],              // Error text
+    lightText: materialRedVariations[50],         // Secondary error text
+    
+    // Material Design specific usage
+    errorStates: {
+      surface: materialRedVariations[5],          // Error surface color
+      border: materialRedVariations[30],          // Error outline/border
+      hover: materialRedVariations[10],           // Error hover state
+      pressed: materialRedVariations[20],         // Error pressed state
+      focus: materialRedVariations[30],           // Error focus ring
+      textPrimary: materialRedVariations[100],    // Primary error text
+      textSecondary: materialRedVariations[80]    // Secondary error text
+    },
+    
+    // Material Design elevation states
+    elevation: {
+      raised: `0 2px 4px ${materialRedVariations[20].rgba}`,
+      floating: `0 4px 8px ${materialRedVariations[30].rgba}`,
+      elevated: `0 6px 12px ${materialRedVariations[40].rgba}`
+    }
+  };
+
+  // Color variations for #1976D2 (Material Design Blue)
+
+const materialBlueVariations = {
+    // Full opacity
+    100: {
+      rgba: 'rgba(25, 118, 210, 1)',
+      hex: '#1976D2'
+    },
+    // 90% opacity
+    90: {
+      rgba: 'rgba(25, 118, 210, 0.9)',
+      hex: '#3084d7'
+    },
+    // 80% opacity
+    80: {
+      rgba: 'rgba(25, 118, 210, 0.8)',
+      hex: '#4791db'
+    },
+    // 70% opacity
+    70: {
+      rgba: 'rgba(25, 118, 210, 0.7)',
+      hex: '#5f9fe0'
+    },
+    // 60% opacity
+    60: {
+      rgba: 'rgba(25, 118, 210, 0.6)',
+      hex: '#76ade4'
+    },
+    // 50% opacity
+    50: {
+      rgba: 'rgba(25, 118, 210, 0.5)',
+      hex: '#8cbbe9'
+    },
+    // 40% opacity
+    40: {
+      rgba: 'rgba(25, 118, 210, 0.4)',
+      hex: '#a3c9ed'
+    },
+    // 30% opacity
+    30: {
+      rgba: 'rgba(25, 118, 210, 0.3)',
+      hex: '#b9d7f1'
+    },
+    // 20% opacity
+    20: {
+      rgba: 'rgba(25, 118, 210, 0.2)',
+      hex: '#d0e5f6'
+    },
+    // 10% opacity
+    10: {
+      rgba: 'rgba(25, 118, 210, 0.1)',
+      hex: '#e7f2fa'
+    },
+    // 5% opacity
+    5: {
+      rgba: 'rgba(25, 118, 210, 0.05)',
+      hex: '#f3f9fd'
+    }
+  };
+  
+  // Common use cases for Material Design Blue:
+  const materialBlueUsage = {
+    primary: materialBlueVariations[100],          // Main brand color
+    hover: materialBlueVariations[90],             // Hover state
+    active: materialBlueVariations[80],            // Active/pressed state
+    disabled: materialBlueVariations[60],          // Disabled state
+    background: materialBlueVariations[10],        // Light background
+    backgroundHover: materialBlueVariations[20],   // Background hover
+    border: materialBlueVariations[30],            // Border color
+    shadow: materialBlueVariations[20],            // Box shadow
+    text: materialBlueVariations[90],              // Text on light background
+    lightText: materialBlueVariations[50],         // Secondary text
+    
+    // Material Design specific usage
+    components: {
+      button: {
+        default: materialBlueVariations[100],
+        hover: materialBlueVariations[90],
+        active: materialBlueVariations[80],
+        disabled: materialBlueVariations[60],
+        ripple: materialBlueVariations[40]
+      },
+      input: {
+        border: materialBlueVariations[50],
+        focus: materialBlueVariations[100],
+        hover: materialBlueVariations[70],
+        filled: materialBlueVariations[10]
+      },
+      chip: {
+        background: materialBlueVariations[10],
+        hover: materialBlueVariations[20],
+        active: materialBlueVariations[30]
+      }
+    },
+    
+    // Material Design elevation states
+    elevation: {
+      raised: `0 2px 4px ${materialBlueVariations[20].rgba}`,
+      floating: `0 4px 8px ${materialBlueVariations[30].rgba}`,
+      elevated: `0 6px 12px ${materialBlueVariations[40].rgba}`
+    },
+    
+    // Interactive states
+    states: {
+      hover: materialBlueVariations[10],
+      selected: materialBlueVariations[20],
+      focus: materialBlueVariations[30],
+      pressed: materialBlueVariations[40]
+    }
+  };
+
+
+
+  // Primary sun gradient variations
+export const sunGradients = {
+  // Main diagonal gradient (matching the image)
+  primary: "linear-gradient(135deg, #FFB800 0%, #FF8A00 100%)",
+  
+  // Horizontal variation
+  horizontal: "linear-gradient(90deg, #FFB800 0%, #FF8A00 100%)",
+  
+  // Vertical variation
+  vertical: "linear-gradient(180deg, #FFB800 0%, #FF8A00 100%)",
+  
+  // Radial variation (for circular effects)
+  radial: "radial-gradient(circle, #FFB800 0%, #FF8A00 100%)",
+  
+  // Three-color variation
+  tricolor: "linear-gradient(135deg, #FFB800 0%, #FF8A00 50%, #FF6B00 100%)",
+  
+  // Soft variation
+  soft: "linear-gradient(135deg, #FFC837 0%, #FF8008 100%)",
+  
+  // Vibrant variation
+  vibrant: "linear-gradient(135deg, #FFD700 0%, #FF7000 100%)",
+  
+  // Subtle variation
+  subtle: "linear-gradient(135deg, #FFB800 0%, #FFA500 100%)",
+};
+
+// Background gradient variations
+export const backgroundGradients = {
+  // Light background
+  light: "linear-gradient(135deg, #FFF8E1 0%, #FFF3E0 100%)",
+  
+  // Dark background
+  dark: "linear-gradient(135deg, #FF8A00 0%, #FF6B00 100%)",
+  
+  // Overlay background
+  overlay: "linear-gradient(135deg, rgba(255,184,0,0.1) 0%, rgba(255,138,0,0.1) 100%)",
+};
+
+// Accent gradient variations
+export const accentGradients = {
+  // Button gradient
+  button: "linear-gradient(135deg, #FFB800 0%, #FF8A00 100%)",
+  
+  // Hover state
+  buttonHover: "linear-gradient(135deg, #FFC837 0%, #FF9500 100%)",
+  
+  // Active state
+  buttonActive: "linear-gradient(135deg, #FF8A00 0%, #FF7000 100%)",
+  
+  // Border gradient
+  border: "linear-gradient(135deg, #FFD700 0%, #FF8A00 100%)",
+};
+
+// Usage example in a styled component or CSS:
+const styleExamples = {
+  // For main container
+  container: {
+    background: sunGradients.primary,
+  },
+  
+  // For button
+  button: {
+    background: accentGradients.button,
+    "&:hover": {
+      background: accentGradients.buttonHover,
+    },
+    "&:active": {
+      background: accentGradients.buttonActive,
+    },
+  },
+  
+  // For background
+  background: {
+    background: backgroundGradients.light,
+  },
+};
+
+// Color values used:
+const colors = {
+  yellow: {
+    light: "#FFD700",    // Bright yellow
+    main: "#FFB800",     // Main yellow
+    dark: "#FF8A00",     // Dark yellow/orange
+  },
+  orange: {
+    light: "#FFA500",    // Light orange
+    main: "#FF8A00",     // Main orange
+    dark: "#FF6B00",     // Dark orange
+  },
+};

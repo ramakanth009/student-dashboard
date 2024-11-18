@@ -1,0 +1,50 @@
+/* App.css */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidenav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.sidenav-container.collapsed {
+  width: 60px;
+}
+
+.sidenav-container.expanded {
+  width: 200px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+.main-content.collapsed {
+  margin-left: 60px;
+}
+
+.main-content.expanded {
+  margin-left: 180px;
+}
+
+.full-content {
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
