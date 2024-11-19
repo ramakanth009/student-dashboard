@@ -6,10 +6,9 @@ import {
 } from "@mui/material";
 import Welcomebanner from "../../Components/Welcome/welcome";
 import Weeklyclasses from "../../Components/Weeklyclasses/weeklyclasses";
-import Livestudygroup from "../../Components/Livestudygroup/livestudygroup";
 import { Studygroupcard } from "../../Components/Livestudygroup/livestudygroup";
 import Mycourses from "../../Components/Mycourses/mycourses";
-import Home2 from "../Home2/dashboard"
+// import Home2 from "../Home2/dashboard"
 
 const Home = () => {
   const classes = useStyles();

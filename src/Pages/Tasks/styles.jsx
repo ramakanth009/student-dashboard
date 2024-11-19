@@ -19,11 +19,11 @@ export const useStyles = makeStyles(() => ({
       marginBottom: "16px",
     },
   },
-  taskhead:{
+  taskhead: {
     // paddingBottom:"20px"
   },
   taskBox: {
-    cursor:"pointer",
+    cursor: "pointer",
     backgroundColor: "#ffffff",
     borderRadius: "16px",
     padding: "20px",
@@ -93,8 +93,8 @@ export const useStyles = makeStyles(() => ({
     fontSize: "0.85rem",
     opacity: 0.8,
   },
-  accordian:{
-    background:"#EBE9E9 !important",
+  accordian: {
+    background: "#EBE9E9 !important",
     // border:"1px solid "
   },
   startbutton: {
@@ -102,18 +102,18 @@ export const useStyles = makeStyles(() => ({
     color: "#ffffff !important",
     marginTop: "12px !important",
     padding: "5px 15px !important",
-    textTransform:"none !important",
-    borderRadius:"20px 20px 20px 20px !important",
-    letterSpacing:"0.8px !important",
+    textTransform: "none !important",
+    borderRadius: "20px 20px 20px 20px !important",
+    letterSpacing: "0.8px !important",
 
     "&:hover": {
       backgroundColor: "#3084d7 !important",
     },
     "&:disabled": {
-      display:"none",
+      display: "none",
       backgroundColor: "#718096 !important",
       color: "#CBD5E0 !important",
-    }
+    },
   },
   headerContainer: {
     display: "flex",
@@ -128,6 +128,65 @@ export const useStyles = makeStyles(() => ({
     },
     "&:disabled": {
       color: "#bdbdbd !important",
+    },
+  },
+  projectDetailsTitle: {
+    fontWeight: "600 !important",
+    fontSize: "1.1rem !important",
+    color: "#2c3e50",
+  },
+  projectDetails: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+  },
+  descriptionSection: {
+    "& ul": {
+      marginLeft: "20px",
+      marginTop: "8px",
+      marginBottom: "8px",
+    },
+    "& strong": {
+      color: "#2c3e50",
+      display: "inline-block",
+      marginTop: "12px",
+      marginBottom: "4px",
+    },
+    "& br": {
+      marginBottom: "8px",
+    },
+  },
+  skillsSection: {
+    marginTop: "16px",
+    "& ul": {
+      marginLeft: "20px",
+      marginTop: "8px",
+    },
+    "& li": {
+      marginBottom: "4px",
+    },
+  },
+  stepsSection: {
+    marginTop: "16px",
+    "& ol": {
+      marginLeft: "20px",
+      marginTop: "8px",
+    },
+    "& li": {
+      marginBottom: "8px",
+    },
+  },
+  submissionSection: {
+    marginTop: "24px",
+    padding: "16px",
+    backgroundColor: "#f8f9fa",
+    borderRadius: "8px",
+  },
+  submitButton: {
+    backgroundColor: "#1976d2 !important",
+    color: "white !important",
+    "&:hover": {
+      backgroundColor: "#1565c0 !important",
     },
   },
 }));

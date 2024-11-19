@@ -265,48 +265,174 @@ const fullStackTasks = [
 const dataScienceTasks = [
   {
     id: 1,
-    title: "Data Analytics Dashboard with Advanced Python Features",
-    description:
-      "This project is a comprehensive Data Analytics Dashboard where users can perform data analysis, upload datasets, and visualize results through an intuitive frontend built with Streamlit or Flask. It integrates core Python concepts, including OOP, file handling, exception handling, and data analysis with libraries like NumPy, Pandas, and Matplotlib.",
-    skills: ["Python", "Pandas", "Scikit-learn"],
-    components: ["Data Preprocessing", "Clustering Analysis", "Visualization"],
+    title: "Python Fundamentals Project: Text-Based Adventure Game",
+    description: `**Project Overview**
+Build a text-based adventure game to practice fundamental Python programming concepts including variables, control flow, data structures, and functions.
+
+**Required Skills**
+* Python Basics & Control Flow
+* Data Structures
+* Functions & Exception Handling
+* File I/O (Basic)
+
+**Core Components**
+* **Game Structure**
+  * Welcome interface and player initialization
+  * Game state management
+  * Multiple storyline paths
+  * Score tracking system
+  
+* **Technical Implementation**
+  * Variable and data structure usage
+  * Control flow implementation
+  * Function definitions
+  * Error handling
+  
+* **Code Organization**
+  * Modular code structure
+  * Documentation
+  * Clean code practices`,
+    skills: ["Python", "Control Flow", "Data Structures", "Functions"],
+    components: [
+      "Game Interface",
+      "State Management",
+      "Error Handling",
+      "Data Structures Implementation",
+    ],
     steps: [
-      "Clean and prepare customer data",
-      "Perform exploratory data analysis",
-      "Apply clustering algorithms",
-      "Visualize segments",
-      "Create actionable insights report",
+      "**Project Setup**",
+      "1. Create a new Python file named 'adventure_game.py'",
+      "2. Set up the basic game structure with welcome message",
+      "3. Implement player initialization and game state variables",
+
+      "**Core Development**",
+      "4. Create the main game loop and control flow structure",
+      "5. Implement game locations and navigation system",
+      "6. Add inventory system using appropriate data structures",
+
+      "**Advanced Features**",
+      "7. Implement score tracking and game state persistence",
+      "8. Add error handling for user inputs",
+      "9. Create help system and game instructions",
+
+      "**Finalization**",
+      "10. Test all game paths and fix any bugs",
+      "11. Add comments and documentation",
+      "12. Create README with game instructions",
     ],
     status: "To Do",
   },
   {
     id: 2,
-    title: "Predictive Sales Analysis",
-    description:
-      "Build a model to forecast future sales based on historical data.",
-    skills: ["Python", "Time Series Analysis", "Prophet"],
-    components: ["Data Preprocessing", "Model Development", "Evaluation"],
+    title: "Data Analysis with Pandas: Market Analysis Project",
+    description: `**Project Overview**
+Conduct a comprehensive market analysis using real-world data, implementing data cleaning, analysis, and visualization techniques with Pandas and related libraries.
+
+**Required Skills**
+* Python & Pandas
+* Data Cleaning
+* Statistical Analysis
+* Data Visualization
+
+**Core Components**
+* **Data Preprocessing**
+  * Data loading and cleaning
+  * Missing value treatment
+  * Feature engineering
+  
+* **Analysis Pipeline**
+  * Exploratory Data Analysis (EDA)
+  * Statistical computations
+  * Trend analysis
+  
+* **Visualization Dashboard**
+  * Interactive charts
+  * Trend visualization
+  * Statistical plots`,
+    skills: ["Python", "Pandas", "Data Analysis", "Visualization"],
+    components: [
+      "Data Preprocessing",
+      "Analysis Pipeline",
+      "Visualization Dashboard",
+      "Documentation",
+    ],
     steps: [
-      "Prepare time series data",
-      "Analyze seasonality and trends",
-      "Develop forecasting model",
-      "Evaluate model performance",
-      "Create visualization dashboard",
+      "**Initial Setup**",
+      "1. Set up your Jupyter notebook environment",
+      "2. Import required libraries and datasets",
+      "3. Perform initial data inspection",
+
+      "**Data Cleaning**",
+      "4. Handle missing values and outliers",
+      "5. Normalize and standardize data",
+      "6. Create derived features",
+
+      "**Analysis**",
+      "7. Conduct Exploratory Data Analysis",
+      "8. Perform statistical tests",
+      "9. Generate insights from data",
+
+      "**Visualization**",
+      "10. Create comprehensive visualizations",
+      "11. Build interactive dashboard",
+      "12. Document findings and insights",
     ],
     status: "To Do",
   },
   {
     id: 3,
-    title: "Sentiment Analysis Project",
-    description: "Develop a sentiment analysis model for customer reviews.",
-    skills: ["NLP", "NLTK", "Deep Learning"],
-    components: ["Text Processing", "Model Training", "Evaluation"],
+    title: "Machine Learning: Customer Segmentation Project",
+    description: `**Project Overview**
+Develop a machine learning model to segment customers based on their behavior and characteristics, implementing clustering algorithms and evaluation metrics.
+
+**Required Skills**
+* Python & Scikit-learn
+* Clustering Algorithms
+* Feature Engineering
+* Model Evaluation
+
+**Core Components**
+* **Data Preparation**
+  * Feature selection
+  * Data preprocessing
+  * Scaling and normalization
+  
+* **Model Development**
+  * Algorithm selection
+  * Parameter tuning
+  * Model validation
+  
+* **Results Analysis**
+  * Cluster interpretation
+  * Visualization
+  * Business insights`,
+    skills: ["Python", "Scikit-learn", "Clustering", "Data Preprocessing"],
+    components: [
+      "Data Preparation",
+      "Model Development",
+      "Results Analysis",
+      "Documentation",
+    ],
     steps: [
-      "Preprocess text data",
-      "Build text classification model",
-      "Train and validate model",
-      "Create evaluation metrics",
-      "Deploy model for predictions",
+      "**Project Setup**",
+      "1. Import and prepare customer dataset",
+      "2. Perform feature selection and engineering",
+      "3. Scale and normalize features",
+
+      "**Model Development**",
+      "4. Implement clustering algorithms",
+      "5. Tune model parameters",
+      "6. Validate clustering results",
+
+      "**Analysis & Reporting**",
+      "7. Interpret cluster characteristics",
+      "8. Create visualization of segments",
+      "9. Document insights and recommendations",
+
+      "**Deployment**",
+      "10. Prepare model for deployment",
+      "11. Create prediction pipeline",
+      "12. Write technical documentation",
     ],
     status: "To Do",
   },
@@ -467,34 +593,70 @@ const Tasks = () => {
         {task.status === "In Progress" && (
           <Accordion className={classes.accordian}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography sx={{ fontWeight: "bold !important" }}>
+              <Typography className={classes.projectDetailsTitle}>
                 Project Details
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <strong>Description:</strong>
-                {task.description}
-              </Typography>
-              <Typography>Skills: {task.skills.join(", ")}</Typography>
-              <Typography>
-                Key Components: {task.components.join(", ")}
-              </Typography>
-              <Typography><strong>Instructions:</strong></Typography>
-              <ol>
-                {task.steps.map((step, index) => (
-                  <li key={index}>{step}</li>
-                ))}
-              </ol>
-              <TextField
-                label="Project Link"
-                variant="outlined"
-                fullWidth
-                style={{ marginTop: "16px", marginBottom: "16px" }}
-              />
-              <Button onClick={() => handleSubmit(task.id, "dummy-link")}>
-                <strong>Submit:</strong>
-              </Button>
+            <AccordionDetails className={classes.projectDetails}>
+              <Box className={classes.descriptionSection}>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: task.description
+                      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                      .replace(/\n/g, "<br/>")
+                      .replace(/\* (.*?)(?=\n|$)/g, "<li>$1</li>")
+                      .replace(/<li>/g, "<ul><li>")
+                      .replace(/<\/li>\n/g, "</li></ul>"),
+                  }}
+                />
+              </Box>
+
+              <Box className={classes.skillsSection}>
+                <Typography>
+                  <strong>Required Skills:</strong>
+                </Typography>
+                <ul>
+                  {task.skills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </Box>
+
+              <Box className={classes.stepsSection}>
+                <Typography>
+                  <strong>Implementation Steps:</strong>
+                </Typography>
+                <ol>
+                  {task.steps.map((step, index) => (
+                    <li key={index}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: step.replace(
+                            /\*\*(.*?)\*\*/g,
+                            "<strong>$1</strong>"
+                          ),
+                        }}
+                      />
+                    </li>
+                  ))}
+                </ol>
+              </Box>
+
+              <Box className={classes.submissionSection}>
+                <TextField
+                  label="Project Link"
+                  variant="outlined"
+                  fullWidth
+                  style={{ marginTop: "16px", marginBottom: "16px" }}
+                />
+                <Button
+                  variant="contained"
+                  onClick={() => handleSubmit(task.id, "dummy-link")}
+                  className={classes.submitButton}
+                >
+                  Submit Project
+                </Button>
+              </Box>
             </AccordionDetails>
           </Accordion>
         )}

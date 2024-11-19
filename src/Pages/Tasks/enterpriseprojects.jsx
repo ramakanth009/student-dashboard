@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, Chip, IconButton, Tooltip } from '@mui/material';
+import { Box, Typography, Card, CardContent, Chip } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Code, Users, Phone, ShoppingBag } from 'lucide-react';
 
