@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import RefreshIcon from '@mui/icons-material/Refresh';
+import RefreshIcon from "@mui/icons-material/Refresh";
 import { useStyles } from "./styles";
 import EnterpriseProjects from "./enterpriseprojects";
 
@@ -265,8 +265,9 @@ const fullStackTasks = [
 const dataScienceTasks = [
   {
     id: 1,
-    title: "Customer Segmentation Analysis",
-    description: "Analyze customer data to identify distinct market segments.",
+    title: "Data Analytics Dashboard with Advanced Python Features",
+    description:
+      "This project is a comprehensive Data Analytics Dashboard where users can perform data analysis, upload datasets, and visualize results through an intuitive frontend built with Streamlit or Flask. It integrates core Python concepts, including OOP, file handling, exception handling, and data analysis with libraries like NumPy, Pandas, and Matplotlib.",
     skills: ["Python", "Pandas", "Scikit-learn"],
     components: ["Data Preprocessing", "Clustering Analysis", "Visualization"],
     steps: [
@@ -281,7 +282,8 @@ const dataScienceTasks = [
   {
     id: 2,
     title: "Predictive Sales Analysis",
-    description: "Build a model to forecast future sales based on historical data.",
+    description:
+      "Build a model to forecast future sales based on historical data.",
     skills: ["Python", "Time Series Analysis", "Prophet"],
     components: ["Data Preprocessing", "Model Development", "Evaluation"],
     steps: [
@@ -307,12 +309,12 @@ const dataScienceTasks = [
       "Deploy model for predictions",
     ],
     status: "To Do",
-  }
+  },
 ];
 
 const fetchTasks = async (userTrack) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  return userTrack === 'fullStack' ? fullStackTasks : dataScienceTasks;
+  return userTrack === "fullStack" ? fullStackTasks : dataScienceTasks;
 };
 
 const Tasks = () => {
@@ -321,8 +323,8 @@ const Tasks = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  
-  const userTrack = localStorage.getItem('userTrack') || 'fullStack';
+
+  const userTrack = localStorage.getItem("userTrack") || "fullStack";
 
   const saveTasks = useCallback((updatedTasks) => {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
@@ -332,25 +334,28 @@ const Tasks = () => {
     try {
       setIsLoading(true);
       setError(null);
-      
+
       const freshTasks = await fetchTasks(userTrack);
       const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-      
+
       if (savedTasks) {
         const savedTasksMap = new Map(
-          savedTasks.map(task => [task.id, { 
-            status: task.status,
-            link: task.link 
-          }])
+          savedTasks.map((task) => [
+            task.id,
+            {
+              status: task.status,
+              link: task.link,
+            },
+          ])
         );
-        
-        const mergedTasks = freshTasks.map(task => {
+
+        const mergedTasks = freshTasks.map((task) => {
           const savedTask = savedTasksMap.get(task.id);
           if (savedTask) {
             return {
               ...task,
               status: savedTask.status,
-              link: savedTask.link
+              link: savedTask.link,
             };
           }
           return task;
@@ -370,7 +375,7 @@ const Tasks = () => {
       }
     } catch (err) {
       setError("Failed to load tasks. Please try again later.");
-      console.error('Error loading tasks:', err);
+      console.error("Error loading tasks:", err);
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
@@ -462,15 +467,20 @@ const Tasks = () => {
         {task.status === "In Progress" && (
           <Accordion className={classes.accordian}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>Project Details</Typography>
+              <Typography sx={{ fontWeight: "bold !important" }}>
+                Project Details
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Description: {task.description}</Typography>
+              <Typography>
+                <strong>Description:</strong>
+                {task.description}
+              </Typography>
               <Typography>Skills: {task.skills.join(", ")}</Typography>
               <Typography>
                 Key Components: {task.components.join(", ")}
               </Typography>
-              <Typography>Steps:</Typography>
+              <Typography><strong>Instructions:</strong></Typography>
               <ol>
                 {task.steps.map((step, index) => (
                   <li key={index}>{step}</li>
@@ -483,7 +493,7 @@ const Tasks = () => {
                 style={{ marginTop: "16px", marginBottom: "16px" }}
               />
               <Button onClick={() => handleSubmit(task.id, "dummy-link")}>
-                Submit
+                <strong>Submit:</strong>
               </Button>
             </AccordionDetails>
           </Accordion>
@@ -506,11 +516,13 @@ const Tasks = () => {
       <Box className={classes.section}>
         <Box className={classes.headerContainer}>
           <Typography className={classes.taskhead} variant="h5">
-            {userTrack === 'fullStack' ? 'Full Stack Development Projects' : 'Data Science Projects'}
+            {userTrack === "fullStack"
+              ? "Full Stack Development Projects"
+              : "Data Science Projects"}
           </Typography>
           <Tooltip title="Refresh Tasks">
-            <IconButton 
-              onClick={handleRefresh} 
+            <IconButton
+              onClick={handleRefresh}
               disabled={isRefreshing}
               className={classes.refreshButton}
             >
