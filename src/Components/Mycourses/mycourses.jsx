@@ -1,203 +1,171 @@
-// // // import React from 'react';
-// // // import { Paper, Typography, Box, LinearProgress } from '@mui/material';
-// // // import { useStyles } from './styles';
-// // // import CodeIcon from '@mui/icons-material/Code';
-// // // import SchoolIcon from '@mui/icons-material/School';
-// // // import StorageIcon from '@mui/icons-material/Storage';
-// // // import ArchitectureIcon from '@mui/icons-material/Architecture';
-
-// // // const CourseCard = ({ title, progress, icon: IconComponent }) => {
-// // //   const classes = useStyles();
-
-// // //   return (
-// // //     <Paper elevation={0} className={classes.courseCard}>
-// // //       <Box className={classes.cardHeader}>
-// // //         <Box className={classes.iconContainer}>
-// // //           <IconComponent className={classes.icon} />
-// // //         </Box>
-// // //         <Typography variant="h6" className={classes.courseTitle}>
-// // //           {title}
-// // //         </Typography>
-// // //       </Box>
-
-// // //       <Box className={classes.progressContainer}>
-// // //         <Box className={classes.progressHeader}>
-// // //           <Typography className={classes.progressLabel}>
-// // //             Progress
-// // //           </Typography>
-// // //           <Typography className={classes.progressValue}>
-// // //             {progress}%
-// // //           </Typography>
-// // //         </Box>
-// // //         <LinearProgress 
-// // //           variant="determinate" 
-// // //           value={progress} 
-// // //           className={classes.progressBar}
-// // //           classes={{
-// // //             bar: classes.progressBarFill
-// // //           }}
-// // //         />
-// // //       </Box>
-// // //     </Paper>
-// // //   );
-// // // };
-
-// // // // Parent component to render all courses
-// // // export const Mycourses = () => {
-// // //   const classes = useStyles();
-  
-// // //   const courses = [
-// // //     {
-// // //       title: "Frontend Development",
-// // //       progress: 85,
-// // //       icon: CodeIcon
-// // //     },
-// // //     {
-// // //       title: "Data Structures",
-// // //       progress: 70,
-// // //       icon: StorageIcon
-// // //     },
-// // //     {
-// // //       title: "System Design",
-// // //       progress: 60,
-// // //       icon: ArchitectureIcon
-// // //     }
-// // //   ];
-
-// // //   return (
-// // //     <Box className={classes.container}>
-// // //       <Box className={classes.header}>
-// // //         <SchoolIcon className={classes.headerIcon} />
-// // //         <Typography variant="h5" className={classes.sectionTitle}>
-// // //           My Courses
-// // //         </Typography>
-// // //       </Box>
-
-// // //       <Box className={classes.coursesGrid}>
-// // //         {courses.map((course, index) => (
-// // //           <CourseCard
-// // //             key={index}
-// // //             title={course.title}
-// // //             progress={course.progress}
-// // //             icon={course.icon}
-// // //           />
-// // //         ))}
-// // //       </Box>
-// // //     </Box>
-// // //   );
-// // // };
-
-// // // export default Mycourses;
-// // import React from 'react';
-// // import { Box, Typography } from '@mui/material';
-// // import CodeIcon from '@mui/icons-material/Code';
-// // import StorageIcon from '@mui/icons-material/Storage';
-// // import ArchitectureIcon from '@mui/icons-material/Architecture';
-// // import SchoolIcon from '@mui/icons-material/School';
-// // import { useStyles } from './styles';
-// // import CourseCard from '../../Elements/Card2/card2';
-
-// // const Mycourses = () => {
-// //   const classes = useStyles();
-  
-// //   const courses = [
-// //     {
-// //       title: "Frontend Development",
-// //       progress: 85,
-// //       icon: CodeIcon,
-// //     },
-// //     {
-// //       title: "Data Structures",
-// //       progress: 70,
-// //       icon: StorageIcon,
-// //     },
-// //     {
-// //       title: "System Design",
-// //       progress: 60,
-// //       icon: ArchitectureIcon,
-// //     }
-    
-// //   ];
-
-// //   const handleProceed = (courseTitle) => {
-// //     console.log(`Proceeding with course: ${courseTitle}`);
-// //   };
-
-// //   return (
-// //     <Box className={classes.container}>
-// //       <Box className={classes.header}>
-// //         <SchoolIcon className={classes.headerIcon} />
-// //         <Typography variant="h5" className={classes.sectionTitle}>
-// //           My Courses
-// //         </Typography>
-// //       </Box>
-
-// //       <Box className={classes.coursesGrid}>
-// //         {courses.map((course, index) => (
-// //           <CourseCard
-// //             key={index}
-// //             title={course.title}
-// //             progress={course.progress}
-// //             icon={course.icon}
-// //             onProceed={() => handleProceed(course.title)}
-// //           />
-// //         ))}
-// //       </Box>
-// //     </Box>
-// //   );
-// // };
-
-// // export default Mycourses;
-// import React from 'react';
-// import { Box, Typography } from '@mui/material';
-// import SchoolIcon from '@mui/icons-material/School';
-// import { useStyles } from './styles';
-// import CourseCard from '../../Elements/Card2/card2';
-// import courses from './coursedata';
-
-// const MyCourses = () => {
-//   const classes = useStyles();
-
-//   const handleProceed = (courseTitle) => {
-//     console.log(`Proceeding with course: ${courseTitle}`);
-//   };
-
-//   return (
-//     <Box className={classes.container}>
-//       <Box className={classes.header}>
-//         <SchoolIcon className={classes.headerIcon} />
-//         <Typography variant="h5" className={classes.sectionTitle}>
-//           My Courses
-//         </Typography>
-//       </Box>
-
-//       <Box className={classes.coursesGrid}>
-//         {courses.map((course, index) => (
-//           <CourseCard
-//             key={index}
-//             title={course.title}
-//             progress={course.progress}
-//             icon={course.icon}
-//             description={course.description}
-//             onProceed={() => handleProceed(course.title)}
-//           />
-//         ))}
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default MyCourses;
 import React from 'react';
 import { Box, Typography, Divider } from '@mui/material';
-import { FaUserGraduate } from "react-icons/fa6";
-import { FaLaptopCode } from "react-icons/fa";
+import { FaUserGraduate, FaLaptopCode, FaPython, FaDatabase } from "react-icons/fa";
+import { SiScikitlearn, SiTensorflow } from "react-icons/si";
+import { BiData } from "react-icons/bi";
+import { BsGraphUp } from "react-icons/bs";
+import { AiOutlineAreaChart } from "react-icons/ai";
 import WebIcon from '@mui/icons-material/Web';
 import StorageIcon from '@mui/icons-material/Storage';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import { useStyles } from './styles';
 import CourseCard from '../../Elements/Card2/card2';
-import { courses } from './coursedata';
+import { FaChartPie } from "react-icons/fa6";
+import { FaMicrochip } from "react-icons/fa";
+
+const fullStackCourses = [
+  {
+    title: "Fundamentals",
+    progress: 95,
+    icon: FaLaptopCode,
+    description: "Programming fundamentals and basics"
+  },
+  {
+    title: "DSA",
+    progress: 75,
+    icon: StorageIcon,
+    description: "Data Structures and Algorithms"
+  },
+  // Frontend courses
+  {
+    title: "HTML",
+    progress: 90,
+    icon: WebIcon,
+    description: "HyperText Markup Language fundamentals"
+  },
+  {
+    title: "CSS",
+    progress: 85,
+    icon: WebIcon,
+    description: "Cascading Style Sheets and modern styling"
+  },
+  {
+    title: "Bootstrap",
+    progress: 80,
+    icon: WebIcon,
+    description: "Bootstrap framework and responsive design"
+  },
+  {
+    title: "JavaScript",
+    progress: 78,
+    icon: WebIcon,
+    description: "Modern JavaScript and ES6+ features"
+  },
+  {
+    title: "React",
+    progress: 82,
+    icon: WebIcon,
+    description: "React.js library and modern web development"
+  },
+  // Backend courses
+  {
+    title: "Java",
+    progress: 73,
+    icon: DataObjectIcon,
+    description: "Core Java and advanced concepts"
+  },
+  {
+    title: "Spring Boot",
+    progress: 68,
+    icon: DataObjectIcon,
+    description: "Spring Boot framework and microservices"
+  },
+  {
+    title: "Node.js",
+    progress: 70,
+    icon: DataObjectIcon,
+    description: "Node.js runtime and server-side JavaScript"
+  },
+  {
+    title: "Express",
+    progress: 65,
+    icon: DataObjectIcon,
+    description: "Express.js framework for Node.js"
+  },
+  {
+    title: "Python",
+    progress: 72,
+    icon: FaPython,
+    description: "Python programming and its applications"
+  },
+  {
+    title: "PHP",
+    progress: 60,
+    icon: DataObjectIcon,
+    description: "PHP web development"
+  },
+  {
+    title: "Database",
+    progress: 77,
+    icon: FaDatabase,
+    description: "SQL and database management systems"
+  }
+];
+
+const dataScienceCourses = [
+  {
+    title: "Python Programming",
+    progress: 90,
+    icon: FaPython,
+    description: "Core Python programming for data science"
+  },
+  {
+    title: "SQL & Databases",
+    progress: 85,
+    icon: BiData,
+    description: "Essential mathematics for data science"
+  },
+  {
+    title: "Statistics & Mathematics",
+    progress: 82,
+    icon: FaChartPie,
+    description: "Statistical methods and probability"
+  },
+  {
+    title: "Exploratory Data Analysis",
+    progress: 88,
+    icon: AiOutlineAreaChart,
+    description: "Numerical computing with NumPy"
+  },
+  {
+    title: "Machine Learning",
+    progress: 75,
+    icon: SiScikitlearn,
+    description: "Machine learning fundamentals"
+  },
+  {
+    title: "Deep Learning",
+    progress: 70,
+    icon: SiTensorflow,
+    description: "Neural networks and deep learning"
+  },
+  {
+    title: "NLP",
+    progress: 65,
+    icon: BiData,
+    description: "Big data processing and analytics"
+  },
+  {
+    title: "Generative AI",
+    progress: 78,
+    icon: FaMicrochip,
+    description: "Data visualization techniques"
+  },
+];
+
+const courseCategories = {
+  fullStack: {
+    frontend: ["HTML", "CSS", "Bootstrap", "JavaScript", "React"],
+    backend: ["Java", "Spring Boot", "Node.js", "Express", "Python", "PHP"],
+    fundamentals: ["Fundamentals", "DSA"],
+    database: ["Database"]
+  },
+  dataScience: {
+    foundations: ["Python Programming", "SQL & Databases"],
+    core: ["Statistics & Mathematics", "Exploratory Data Analysis"],
+    advanced: ["Machine Learning", "Deep Learning", "NLP", "Generative AI"],
+  }
+};
 
 const CourseSection = ({ title, icon: IconComponent, courses }) => {
   const classes = useStyles();
@@ -229,51 +197,62 @@ const CourseSection = ({ title, icon: IconComponent, courses }) => {
 
 const MyCourses = () => {
   const classes = useStyles();
+  // In a real application, you would get this from your authentication context
+  const userTrack = localStorage.getItem('userTrack') || 'fullStack'; // 'fullStack' or 'dataScience'
 
-  const categorizedCourses = {
-    fundamentals: courses.filter(course => 
-      ["Fundamentals", "DSA"].includes(course.title)
-    ),
-    frontend: courses.filter(course => 
-      ["HTML", "CSS", "Bootstrap", "JavaScript", "React"].includes(course.title)
-    ),
-    backend: courses.filter(course => 
-      ["Java", "Spring Boot", "Node.js", "Express", "Python", "PHP"].includes(course.title)
-    ),
-    database: courses.filter(course => 
-      ["Database"].includes(course.title)
-    )
-  };
+  const courses = userTrack === 'fullStack' ? fullStackCourses : dataScienceCourses;
+  const categories = courseCategories[userTrack];
 
-  const sections = [
-    {
-      title: "Fundamentals",
-      icon: FaLaptopCode,
-      courses: categorizedCourses.fundamentals
-    },
-    {
-      title: "Frontend Development",
-      icon: WebIcon,
-      courses: categorizedCourses.frontend
-    },
-    {
-      title: "Backend Development",
-      icon: DataObjectIcon,
-      courses: categorizedCourses.backend
-    },
-    {
-      title: "Database",
-      icon: StorageIcon,
-      courses: categorizedCourses.database
-    }
-  ];
+  let sections = [];
+  if (userTrack === 'fullStack') {
+    sections = [
+      {
+        title: "Fundamentals",
+        icon: FaLaptopCode,
+        courses: courses.filter(course => categories.fundamentals.includes(course.title))
+      },
+      {
+        title: "Frontend Development",
+        icon: WebIcon,
+        courses: courses.filter(course => categories.frontend.includes(course.title))
+      },
+      {
+        title: "Backend Development",
+        icon: DataObjectIcon,
+        courses: courses.filter(course => categories.backend.includes(course.title))
+      },
+      {
+        title: "Database",
+        icon: StorageIcon,
+        courses: courses.filter(course => categories.database.includes(course.title))
+      }
+    ];
+  } else {
+    sections = [
+      {
+        title: "Fundamentals",
+        icon: FaPython,
+        courses: courses.filter(course => categories.foundations.includes(course.title))
+      },
+      {
+        title: "Core Datascience",
+        icon: BiData,
+        courses: courses.filter(course => categories.core.includes(course.title))
+      },
+      {
+        title: "Advanced Topics",
+        icon: BsGraphUp,
+        courses: courses.filter(course => categories.advanced.includes(course.title))
+      }
+    ];
+  }
 
   return (
     <Box className={classes.container}>
       <Box className={classes.mainHeader}>
         <FaUserGraduate className={classes.headerIcon} />
         <Typography variant="h5" className={classes.mainTitle}>
-          My Courses
+          My Courses - {userTrack === 'fullStack' ? 'Full Stack Development' : 'Data Science'}
         </Typography>
       </Box>
 

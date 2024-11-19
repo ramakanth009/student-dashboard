@@ -20,7 +20,7 @@ export const useStyles = makeStyles(() => ({
     },
   },
   taskhead:{
-    paddingBottom:"20px"
+    // paddingBottom:"20px"
   },
   taskBox: {
     cursor:"pointer",
@@ -114,5 +114,20 @@ export const useStyles = makeStyles(() => ({
       backgroundColor: "#718096 !important",
       color: "#CBD5E0 !important",
     }
-  }
+  },
+  headerContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "24px",
+  },
+  refreshButton: {
+    color: "#1976d2 !important",
+    "&:hover": {
+      backgroundColor: "rgba(25, 118, 210, 0.04) !important",
+    },
+    "&:disabled": {
+      color: "#bdbdbd !important",
+    },
+  },
 }));

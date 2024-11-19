@@ -7,13 +7,16 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  IconButton,
+  Tooltip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import RefreshIcon from '@mui/icons-material/Refresh';
 import { useStyles } from "./styles";
 import EnterpriseProjects from "./enterpriseprojects";
 
 //Tasks data
-const mockTasks = [
+const fullStackTasks = [
   {
     id: 1,
     title: "Personal Portfolio Website",
@@ -259,10 +262,57 @@ const mockTasks = [
     status: "To Do",
   },
 ];
+const dataScienceTasks = [
+  {
+    id: 1,
+    title: "Customer Segmentation Analysis",
+    description: "Analyze customer data to identify distinct market segments.",
+    skills: ["Python", "Pandas", "Scikit-learn"],
+    components: ["Data Preprocessing", "Clustering Analysis", "Visualization"],
+    steps: [
+      "Clean and prepare customer data",
+      "Perform exploratory data analysis",
+      "Apply clustering algorithms",
+      "Visualize segments",
+      "Create actionable insights report",
+    ],
+    status: "To Do",
+  },
+  {
+    id: 2,
+    title: "Predictive Sales Analysis",
+    description: "Build a model to forecast future sales based on historical data.",
+    skills: ["Python", "Time Series Analysis", "Prophet"],
+    components: ["Data Preprocessing", "Model Development", "Evaluation"],
+    steps: [
+      "Prepare time series data",
+      "Analyze seasonality and trends",
+      "Develop forecasting model",
+      "Evaluate model performance",
+      "Create visualization dashboard",
+    ],
+    status: "To Do",
+  },
+  {
+    id: 3,
+    title: "Sentiment Analysis Project",
+    description: "Develop a sentiment analysis model for customer reviews.",
+    skills: ["NLP", "NLTK", "Deep Learning"],
+    components: ["Text Processing", "Model Training", "Evaluation"],
+    steps: [
+      "Preprocess text data",
+      "Build text classification model",
+      "Train and validate model",
+      "Create evaluation metrics",
+      "Deploy model for predictions",
+    ],
+    status: "To Do",
+  }
+];
 
-const fetchTasks = async () => {
+const fetchTasks = async (userTrack) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  return mockTasks;
+  return userTrack === 'fullStack' ? fullStackTasks : dataScienceTasks;
 };
 
 const Tasks = () => {
@@ -270,6 +320,9 @@ const Tasks = () => {
   const [tasks, setTasks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  
+  const userTrack = localStorage.getItem('userTrack') || 'fullStack';
 
   const saveTasks = useCallback((updatedTasks) => {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
@@ -279,23 +332,59 @@ const Tasks = () => {
     try {
       setIsLoading(true);
       setError(null);
+      
+      const freshTasks = await fetchTasks(userTrack);
       const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-
+      
       if (savedTasks) {
-        setTasks(savedTasks);
+        const savedTasksMap = new Map(
+          savedTasks.map(task => [task.id, { 
+            status: task.status,
+            link: task.link 
+          }])
+        );
+        
+        const mergedTasks = freshTasks.map(task => {
+          const savedTask = savedTasksMap.get(task.id);
+          if (savedTask) {
+            return {
+              ...task,
+              status: savedTask.status,
+              link: savedTask.link
+            };
+          }
+          return task;
+        });
+
+        const sortedTasks = mergedTasks.sort((a, b) => {
+          if (a.status === "Completed" && b.status !== "Completed") return 1;
+          if (a.status !== "Completed" && b.status === "Completed") return -1;
+          return 0;
+        });
+
+        setTasks(sortedTasks);
+        saveTasks(sortedTasks);
       } else {
-        const fetchedTasks = await fetchTasks();
-        setTasks(fetchedTasks);
-        saveTasks(fetchedTasks);
+        setTasks(freshTasks);
+        saveTasks(freshTasks);
       }
     } catch (err) {
       setError("Failed to load tasks. Please try again later.");
+      console.error('Error loading tasks:', err);
     } finally {
       setIsLoading(false);
+      setIsRefreshing(false);
     }
-  }, [saveTasks]);
+  }, [saveTasks, userTrack]);
 
   useEffect(() => {
+    localStorage.removeItem("tasks");
+    loadTasks();
+  }, [userTrack, loadTasks]);
+
+  const handleRefresh = useCallback(() => {
+    setIsRefreshing(true);
+    localStorage.removeItem("tasks");
     loadTasks();
   }, [loadTasks]);
 
@@ -320,7 +409,6 @@ const Tasks = () => {
             task.id === taskId ? { ...task, status: "Completed", link } : task
           )
           .sort((a, b) => {
-            // Sort completed tasks to the bottom
             if (a.status === "Completed" && b.status !== "Completed") return 1;
             if (a.status !== "Completed" && b.status === "Completed") return -1;
             return 0;
@@ -416,13 +504,25 @@ const Tasks = () => {
   return (
     <Box className={classes.container}>
       <Box className={classes.section}>
-        <Typography className={classes.taskhead} variant="h5">
-          Projects
-        </Typography>
+        <Box className={classes.headerContainer}>
+          <Typography className={classes.taskhead} variant="h5">
+            {userTrack === 'fullStack' ? 'Full Stack Development Projects' : 'Data Science Projects'}
+          </Typography>
+          <Tooltip title="Refresh Tasks">
+            <IconButton 
+              onClick={handleRefresh} 
+              disabled={isRefreshing}
+              className={classes.refreshButton}
+            >
+              <RefreshIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
         {tasks.map((task) => renderTask(task))}
       </Box>
       <Box className={classes.section}>
-        <EnterpriseProjects />
+        <Typography variant="h5">Tools That Shape the Future</Typography>
+        <EnterpriseProjects userTrack={userTrack} />
       </Box>
     </Box>
   );

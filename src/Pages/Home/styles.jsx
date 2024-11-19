@@ -8,6 +8,7 @@ export const useStyles = makeStyles(() => ({
     boxSizing: "border-box",
     height: "auto",
     backgroundColor: "#ffffff",
+    paddingBottom:"40px",
     borderRadius: "20px",
   },
 }));

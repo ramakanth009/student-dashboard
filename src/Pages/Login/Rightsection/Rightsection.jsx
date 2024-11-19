@@ -1,4 +1,3 @@
-// RightSection.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -10,6 +9,7 @@ import {
   FormControlLabel,
   Link,
   InputAdornment,
+  Alert,
 } from "@mui/material";
 import { Email, Lock } from "@mui/icons-material";
 import { useStyles } from "./styles";
@@ -27,7 +27,6 @@ const RightSection = () => {
   });
   const [errors, setErrors] = useState({});
 
-  // Check for remembered credentials on component mount
   useEffect(() => {
     const rememberedCreds = localStorage.getItem("rememberedCredentials");
     if (rememberedCreds) {
@@ -47,12 +46,16 @@ const RightSection = () => {
       ...prev,
       [name]: name === "rememberMe" ? checked : value,
     }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: null }));
+    }
   };
 
   const validateForm = () => {
     const newErrors = {};
     if (!formData.email) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Username is required";
     }
     if (!formData.password) {
       newErrors.password = "Password is required";
@@ -64,18 +67,25 @@ const RightSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Check credentials
-      if (
-        formData.email === "student" &&
-        formData.password === "sun"
-      ) {
+      let isValidUser = false;
+      let userTrack = '';
+
+      // Check credentials and determine user track
+      if (formData.email === "fullstack" && formData.password === "sun") {
+        isValidUser = true;
+        userTrack = 'fullStack';
+      } else if (formData.email === "datascience" && formData.password === "sun") {
+        isValidUser = true;
+        userTrack = 'dataScience';
+      }
+
+      if (isValidUser) {
         // Handle remember me
         if (formData.rememberMe) {
           localStorage.setItem("rememberedCredentials", JSON.stringify({
             email: formData.email,
             password: formData.password
           }));
-          // Set expiration for 30 days
           const expirationDate = new Date();
           expirationDate.setDate(expirationDate.getDate() + 30);
           localStorage.setItem("credentialsExpiration", expirationDate.toISOString());
@@ -84,8 +94,11 @@ const RightSection = () => {
           localStorage.removeItem("credentialsExpiration");
         }
 
-        // Set auth token and navigate
+        // Set auth token and user track
         localStorage.setItem("authToken", "dummy-token");
+        localStorage.setItem("userTrack", userTrack);
+        localStorage.setItem("userType", userTrack === 'fullStack' ? 'Full Stack Developer' : 'Data Scientist');
+
         navigate("/home");
       } else {
         setErrors({ auth: "Invalid username or password" });
@@ -135,9 +148,9 @@ const RightSection = () => {
           </Typography>
 
           {errors.auth && (
-            <Typography color="error" className={classes.errorMessage}>
+            <Alert severity="error" className={classes.errorMessage}>
               {errors.auth}
-            </Typography>
+            </Alert>
           )}
 
           <TextField
@@ -209,6 +222,16 @@ const RightSection = () => {
           >
             Login
           </Button>
+
+          <Alert severity="info" className={classes.credentialsInfo}>
+            <Typography variant="body2">
+              Available login credentials:
+              <br />
+              <strong>Full Stack:</strong> username: fullstack, password: sun
+              <br />
+              <strong>Data Science:</strong> username: datascience, password: sun
+            </Typography>
+          </Alert>
 
           <Box className={classes.strokeWrapper}>
             <img

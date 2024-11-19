@@ -10,7 +10,7 @@ export const useStyles = makeStyles(() => ({
   container: {
     display: 'flex',
     minHeight: '600px',
-    margin: '20px auto',
+    margin: '25px auto',
     padding: 0,
     overflow: 'hidden',
     borderRadius: '20px',

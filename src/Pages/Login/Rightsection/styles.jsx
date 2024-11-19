@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles(() => ({
   rightSection: {
     flex: 1,
+    
     backgroundColor: "white",
     padding: "48px",
     position: "relative",
@@ -69,8 +70,14 @@ export const useStyles = makeStyles(() => ({
     },
   },
   errorMessage: {
-    marginBottom: "16px",
-    textAlign: "center",
+    marginBottom: "16px !important",
+  },
+  credentialsInfo: {
+    marginTop: "16px !important",
+    marginBottom: "16px !important",
+    "& .MuiAlert-message": {
+      width: "100%",
+    },
   },
   textField: {
     marginBottom: "20px !important",

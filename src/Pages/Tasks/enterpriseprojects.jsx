@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
   },
   projectCard: {
     marginBottom: '20px',
-    borderRadius: '12px',
+    borderRadius: '20px',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     cursor: 'pointer',
     '&:hover': {
@@ -110,11 +110,12 @@ const EnterpriseProjects = () => {
   return (
     <Box className={classes.projectsContainer}>
       <Box className={classes.header}>
-        <Typography variant="h5" gutterBottom>
+        {/* <Typography variant="h5" gutterBottom>
           Enterprise Projects Showcase
-        </Typography>
+        </Typography> */}
         <Typography className={classes.subheader}>
-          Advanced projects you'll be capable of building after completing the course
+          {/* Advanced projects you'll be capable of building after completing the course */}
+          Master the skills to join us in creating cutting-edge tools and impactful projects that drive innovation.
         </Typography>
       </Box>
 
