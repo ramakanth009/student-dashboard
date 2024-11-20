@@ -265,183 +265,248 @@ const fullStackTasks = [
 const dataScienceTasks = [
   {
     id: 1,
-    title: "Python Fundamentals Project: Text-Based Adventure Game",
+    title: "Week 1: Text-Based Adventure Game",
     description: `**Project Overview**
-Build a text-based adventure game to practice fundamental Python programming concepts including variables, control flow, data structures, and functions.
-
-**Required Skills**
-* Python Basics & Control Flow
-* Data Structures
-* Functions & Exception Handling
-* File I/O (Basic)
+Build a text-based adventure game to practice fundamental Python programming concepts.
 
 **Core Components**
-* **Game Structure**
-  * Welcome interface and player initialization
-  * Game state management
-  * Multiple storyline paths
-  * Score tracking system
+ **Game Structure**
+  → Introduction and player setup
+  → Navigation through choices
+  → Game state management
+  → Item collection system
   
-* **Technical Implementation**
-  * Variable and data structure usage
-  * Control flow implementation
-  * Function definitions
-  * Error handling
-  
-* **Code Organization**
-  * Modular code structure
-  * Documentation
-  * Clean code practices`,
-    skills: ["Python", "Control Flow", "Data Structures", "Functions"],
+ **Technical Implementation**
+  → Variables for player data and game state
+  → Control flow with if-else statements
+  → Lists/Tuples for inventory
+  → Dictionaries for locations
+  → Functions for key actions
+  → Exception handling`,
+    skills: ["Python", "Variables", "Control Flow", "Data Structures", "Functions", "Exception Handling"],
     components: [
-      "Game Interface",
-      "State Management",
-      "Error Handling",
-      "Data Structures Implementation",
+      "Welcome Interface",
+      "Player State Management",
+      "Location Navigation",
+      "Inventory System",
+      "Input Validation"
     ],
     steps: [
-      "**Project Setup**",
-      "1. Create a new Python file named 'adventure_game.py'",
-      "2. Set up the basic game structure with welcome message",
-      "3. Implement player initialization and game state variables",
-
-      "**Core Development**",
-      "4. Create the main game loop and control flow structure",
-      "5. Implement game locations and navigation system",
-      "6. Add inventory system using appropriate data structures",
-
-      "**Advanced Features**",
-      "7. Implement score tracking and game state persistence",
-      "8. Add error handling for user inputs",
-      "9. Create help system and game instructions",
-
-      "**Finalization**",
-      "10. Test all game paths and fix any bugs",
-      "11. Add comments and documentation",
-      "12. Create README with game instructions",
+      "1. Create text_based_game.py file",
+      "2. Implement welcome message and player name input",
+      "3. Create game state variables (health, score)",
+      "4. Define location dictionary with descriptions",
+      "5. Implement navigation system with if-else statements",
+      "6. Add inventory system using lists",
+      "7. Create functions for key actions",
+      "8. Add exception handling for invalid inputs",
+      "9. Implement win/lose conditions",
+      "10. Test all game paths",
+      "11. Add documentation and comments",
+      "12. Create README file"
     ],
-    status: "To Do",
+    status: "To Do"
   },
   {
     id: 2,
-    title: "Data Analysis with Pandas: Market Analysis Project",
+    title: "Week 2: Inventory Management System",
     description: `**Project Overview**
-Conduct a comprehensive market analysis using real-world data, implementing data cleaning, analysis, and visualization techniques with Pandas and related libraries.
-
-**Required Skills**
-* Python & Pandas
-* Data Cleaning
-* Statistical Analysis
-* Data Visualization
+Build an inventory management system using advanced Python concepts including lambda functions, modules, and file handling.
 
 **Core Components**
-* **Data Preprocessing**
-  * Data loading and cleaning
-  * Missing value treatment
-  * Feature engineering
+ **System Structure**
+  → Item management
+  → Data persistence
+  → Filter and sort functionality
   
-* **Analysis Pipeline**
-  * Exploratory Data Analysis (EDA)
-  * Statistical computations
-  * Trend analysis
-  
-* **Visualization Dashboard**
-  * Interactive charts
-  * Trend visualization
-  * Statistical plots`,
-    skills: ["Python", "Pandas", "Data Analysis", "Visualization"],
+ **Technical Implementation**
+  → Dictionary-based storage
+  → Lambda functions for filtering
+  → File I/O operations
+  → Exception handling`,
+    skills: ["Python", "Lambda Functions", "Modules", "File Handling", "Data Structures"],
     components: [
-      "Data Preprocessing",
-      "Analysis Pipeline",
-      "Visualization Dashboard",
-      "Documentation",
+      "Item Management Interface",
+      "Data Storage System",
+      "File Operations",
+      "Filtering System"
     ],
     steps: [
-      "**Initial Setup**",
-      "1. Set up your Jupyter notebook environment",
-      "2. Import required libraries and datasets",
-      "3. Perform initial data inspection",
-
-      "**Data Cleaning**",
-      "4. Handle missing values and outliers",
-      "5. Normalize and standardize data",
-      "6. Create derived features",
-
-      "**Analysis**",
-      "7. Conduct Exploratory Data Analysis",
-      "8. Perform statistical tests",
-      "9. Generate insights from data",
-
-      "**Visualization**",
-      "10. Create comprehensive visualizations",
-      "11. Build interactive dashboard",
-      "12. Document findings and insights",
+      "1. Create inventory_management.py file",
+      "2. Set up dictionary for inventory storage",
+      "3. Implement add/remove item functions",
+      "4. Create lambda functions for filtering",
+      "5. Add file save/load functionality",
+      "6. Implement exception handling",
+      "7. Create interactive menu",
+      "8. Test all operations",
+      "9. Document code",
+      "10. Create README file"
     ],
-    status: "To Do",
+    status: "To Do"
   },
   {
     id: 3,
-    title: "Machine Learning: Customer Segmentation Project",
+    title: "Week 3: Library Management System",
     description: `**Project Overview**
-Develop a machine learning model to segment customers based on their behavior and characteristics, implementing clustering algorithms and evaluation metrics.
-
-**Required Skills**
-* Python & Scikit-learn
-* Clustering Algorithms
-* Feature Engineering
-* Model Evaluation
+Develop a library management system using Object-Oriented Programming concepts and advanced functions.
 
 **Core Components**
-* **Data Preparation**
-  * Feature selection
-  * Data preprocessing
-  * Scaling and normalization
+ **System Structure**
+  → Book and Library classes
+  → Data encapsulation
+  → Polymorphic implementations
   
-* **Model Development**
-  * Algorithm selection
-  * Parameter tuning
-  * Model validation
-  
-* **Results Analysis**
-  * Cluster interpretation
-  * Visualization
-  * Business insights`,
-    skills: ["Python", "Scikit-learn", "Clustering", "Data Preprocessing"],
+ **Technical Implementation**
+  → Class hierarchy
+  → Private attributes
+  → Method overriding
+  → Exception handling`,
+    skills: ["Python", "OOP", "Encapsulation", "Polymorphism", "Exception Handling"],
     components: [
-      "Data Preparation",
-      "Model Development",
-      "Results Analysis",
-      "Documentation",
+      "Book Class System",
+      "Library Management Interface",
+      "Search Functionality",
+      "Data Protection"
     ],
     steps: [
-      "**Project Setup**",
-      "1. Import and prepare customer dataset",
-      "2. Perform feature selection and engineering",
-      "3. Scale and normalize features",
-
-      "**Model Development**",
-      "4. Implement clustering algorithms",
-      "5. Tune model parameters",
-      "6. Validate clustering results",
-
-      "**Analysis & Reporting**",
-      "7. Interpret cluster characteristics",
-      "8. Create visualization of segments",
-      "9. Document insights and recommendations",
-
-      "**Deployment**",
-      "10. Prepare model for deployment",
-      "11. Create prediction pipeline",
-      "12. Write technical documentation",
+      "1. Create library_management.py file",
+      "2. Define Book class with attributes",
+      "3. Create Library class",
+      "4. Implement encapsulation",
+      "5. Add polymorphic methods",
+      "6. Create exception handling",
+      "7. Build interactive menu",
+      "8. Test all functionalities",
+      "9. Add documentation",
+      "10. Create README file"
     ],
-    status: "To Do",
+    status: "To Do"
   },
+  {
+    id: 4,
+    title: "Week 4: Employee Management System",
+    description: `**Project Overview**
+Build an employee management system utilizing advanced OOP concepts and Python features.
+
+**Core Components**
+ **System Structure**
+  → Employee class hierarchy
+  → Abstract base classes
+  → Decorator implementation
+  → Generator functions
+  
+ **Technical Implementation**
+  → Inheritance
+  → Abstract methods
+  → Custom decorators
+  → Generator yields`,
+    skills: ["Python", "Advanced OOP", "Abstract Classes", "Decorators", "Generators"],
+    components: [
+      "Employee Class Hierarchy",
+      "Abstract Methods",
+      "Action Logging",
+      "Record Generation"
+    ],
+    steps: [
+      "1. Create employee_management.py file",
+      "2. Define Employee base class",
+      "3. Create employee subclasses",
+      "4. Implement abstract methods",
+      "5. Add decorators for logging",
+      "6. Create generator for records",
+      "7. Build management interface",
+      "8. Test system functionality",
+      "9. Document code",
+      "10. Create README file"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 5,
+    title: "Week 5: Data Analysis Project",
+    description: `**Project Overview**
+Perform comprehensive data analysis using NumPy, Pandas, and Matplotlib.
+
+**Core Components**
+ **Analysis Structure**
+  → Data generation
+  → DataFrame operations
+  → Statistical analysis
+  → Data visualization
+  
+ **Technical Implementation**
+  → NumPy arrays
+  → Pandas operations
+  → Matplotlib plots
+  → Data manipulation`,
+    skills: ["Python", "NumPy", "Pandas", "Matplotlib", "Data Analysis"],
+    components: [
+      "Data Generation",
+      "Statistical Analysis",
+      "Data Visualization",
+      "Results Documentation"
+    ],
+    steps: [
+      "1. Create data_analysis_project.py file",
+      "2. Generate dataset using NumPy",
+      "3. Create Pandas DataFrame",
+      "4. Perform statistical analysis",
+      "5. Handle missing data",
+      "6. Create derived features",
+      "7. Generate visualizations",
+      "8. Document results",
+      "9. Add code comments",
+      "10. Create README file"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 6,
+    title: "Week 6: Web Framework Project",
+    description: `**Project Overview**
+Build a web application using a chosen framework (Django/Flask/Streamlit) to present data analysis results.
+
+**Core Components**
+ **Application Structure**
+  → Framework setup
+  → Route definitions
+  → Template creation
+  → Data presentation
+  
+ **Technical Implementation**
+  → Web framework
+  → Routing system
+  → Template engine
+  → Static files`,
+    skills: ["Python", "Web Framework", "HTML", "Data Presentation"],
+    components: [
+      "Framework Setup",
+      "Route Configuration",
+      "Template System",
+      "Data Display"
+    ],
+    steps: [
+      "1. Choose and install framework",
+      "2. Set up project structure",
+      "3. Define routes/views",
+      "4. Create templates",
+      "5. Implement data display",
+      "6. Add static files",
+      "7. Test application",
+      "8. Deploy locally",
+      "9. Document setup process",
+      "10. Create README file"
+    ],
+    status: "To Do"
+  }
 ];
 
 const fetchTasks = async (userTrack) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return userTrack === "fullStack" ? fullStackTasks : dataScienceTasks;
 };
+
 
 const Tasks = () => {
   const classes = useStyles();
@@ -628,7 +693,7 @@ const Tasks = () => {
                 </Typography>
                 <ol>
                   {task.steps.map((step, index) => (
-                    <li key={index}>
+                    // <li key={index}>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: step.replace(
@@ -637,7 +702,7 @@ const Tasks = () => {
                           ),
                         }}
                       />
-                    </li>
+                    // </li>
                   ))}
                 </ol>
               </Box>
