@@ -8,6 +8,7 @@ import Help from "../Pages/Help/help";
 // import ChatWithAI from "../Pages/Chatwithai/chatwithai";
 import Git from "../Pages/Git/git";
 import Login from "../Pages/Login/login";
+// import ScheduleGrid from '../Elements/Daybox/Shedulegrid'
 
 // Lazy load module components
 const moduleImports = {
@@ -91,6 +92,7 @@ const AppRoutes = () => {
       <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       <Route path="/curriculam" element={<ProtectedRoute><Curriculam /></ProtectedRoute>} />
+      {/* <Route path="/schedule" element={<ScheduleGrid />} /> */}
       
       {/* Module routes */}
       {Array.from({ length: 14 }, (_, i) => i + 1).map((moduleNumber) => (

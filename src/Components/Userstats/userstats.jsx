@@ -18,14 +18,14 @@ const UserStats = () => {
     {
       icon: <TrophyIcon />,
       label: 'Skills',
-      count: 15,
+      count: 1,
       tooltip: 'Verified skills in your portfolio',
       iconClass: classes.skillsIcon
     },
     {
       icon: <FireIcon />,
       label: 'Daily Streak',
-      count: 7,
+      count: 1,
       tooltip: 'Consecutive days of activity',
       iconClass: classes.streakIcon
     }

@@ -16,87 +16,87 @@ import { FaMicrochip } from "react-icons/fa";
 const fullStackCourses = [
   {
     title: "Fundamentals",
-    progress: 95,
+    progress: 0,
     icon: FaLaptopCode,
     description: "Programming fundamentals and basics"
   },
   {
     title: "DSA",
-    progress: 75,
+    progress: 0,
     icon: StorageIcon,
     description: "Data Structures and Algorithms"
   },
   // Frontend courses
   {
     title: "HTML",
-    progress: 90,
+    progress: 0,
     icon: WebIcon,
     description: "HyperText Markup Language fundamentals"
   },
   {
     title: "CSS",
-    progress: 85,
+    progress: 0,
     icon: WebIcon,
     description: "Cascading Style Sheets and modern styling"
   },
   {
     title: "Bootstrap",
-    progress: 80,
+    progress: 0,
     icon: WebIcon,
     description: "Bootstrap framework and responsive design"
   },
   {
     title: "JavaScript",
-    progress: 78,
+    progress: 0,
     icon: WebIcon,
     description: "Modern JavaScript and ES6+ features"
   },
   {
     title: "React",
-    progress: 82,
+    progress: 0,
     icon: WebIcon,
     description: "React.js library and modern web development"
   },
   // Backend courses
   {
     title: "Java",
-    progress: 73,
+    progress: 0,
     icon: DataObjectIcon,
     description: "Core Java and advanced concepts"
   },
   {
     title: "Spring Boot",
-    progress: 68,
+    progress: 0,
     icon: DataObjectIcon,
     description: "Spring Boot framework and microservices"
   },
   {
     title: "Node.js",
-    progress: 70,
+    progress: 0,
     icon: DataObjectIcon,
     description: "Node.js runtime and server-side JavaScript"
   },
   {
     title: "Express",
-    progress: 65,
+    progress: 0,
     icon: DataObjectIcon,
     description: "Express.js framework for Node.js"
   },
   {
     title: "Python",
-    progress: 72,
+    progress: 0,
     icon: FaPython,
     description: "Python programming and its applications"
   },
   {
     title: "PHP",
-    progress: 60,
+    progress: 0,
     icon: DataObjectIcon,
     description: "PHP web development"
   },
   {
     title: "Database",
-    progress: 77,
+    progress: 0,
     icon: FaDatabase,
     description: "SQL and database management systems"
   }
@@ -105,49 +105,49 @@ const fullStackCourses = [
 const dataScienceCourses = [
   {
     title: "Python Programming",
-    progress: 90,
+    progress: 0,
     icon: FaPython,
     description: "Core Python programming for data science"
   },
   {
     title: "SQL & Databases",
-    progress: 85,
+    progress: 0,
     icon: BiData,
     description: "Essential mathematics for data science"
   },
   {
     title: "Statistics & Mathematics",
-    progress: 82,
+    progress: 0,
     icon: FaChartPie,
     description: "Statistical methods and probability"
   },
   {
     title: "Exploratory Data Analysis",
-    progress: 88,
+    progress: 0,
     icon: AiOutlineAreaChart,
     description: "Numerical computing with NumPy"
   },
   {
     title: "Machine Learning",
-    progress: 75,
+    progress: 0,
     icon: SiScikitlearn,
     description: "Machine learning fundamentals"
   },
   {
     title: "Deep Learning",
-    progress: 70,
+    progress: 0,
     icon: SiTensorflow,
     description: "Neural networks and deep learning"
   },
   {
     title: "NLP",
-    progress: 65,
+    progress: 0,
     icon: BiData,
     description: "Big data processing and analytics"
   },
   {
     title: "Generative AI",
-    progress: 78,
+    progress: 0,
     icon: FaMicrochip,
     description: "Data visualization techniques"
   },

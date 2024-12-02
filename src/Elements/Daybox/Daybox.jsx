@@ -1,15 +1,16 @@
+// Daybox.jsx
 import React from 'react';
-import { Box, Typography, Paper, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import { useStyles } from './styles';
 
-const Daybox = ({ daySchedule, onJoinClass }) => {
+const DayBox = ({ daySchedule, onJoinClass }) => {
   const classes = useStyles();
   const hasClass = daySchedule.classes.length > 0;
+  const currentClass = hasClass ? daySchedule.classes[0] : null;
 
   return (
-    <Paper 
-      elevation={0}
-      className={`${classes.dayBox} ${hasClass ? classes.activeDay : classes.emptyDayBox}`}
+    <Box 
+      className={`${classes.dayBox} ${hasClass ? classes.hasClass : ''}`}
     >
       <Typography className={classes.dayName}>
         {daySchedule.day}
@@ -17,34 +18,84 @@ const Daybox = ({ daySchedule, onJoinClass }) => {
       
       {hasClass ? (
         <Box className={classes.classInfo}>
-          <Typography className={classes.classTime}>
-            {daySchedule.classes[0].time}
+          <Typography className={classes.timeSlot}>
+            {currentClass.time}
           </Typography>
           <Typography className={classes.classTitle}>
-            {daySchedule.classes[0].title}
+            {currentClass.title}
           </Typography>
-          <Box className={classes.buttonContainer}>
-            <Button
-            sx={{borderWidth: "2px !important",
-              borderColor: "rgba(235,161,18,0.3) !important",}}
-              variant="contained"
-              className={classes.joinButton}
-              onClick={() => onJoinClass(daySchedule.day, daySchedule.classes[0])}
-            >
-              Join Class
-            </Button>
-          </Box>
+          {/* <Typography className={classes.instructor}>
+            with {currentClass.instructor}
+          </Typography> */}
+          <Button
+            variant="contained"
+            className={classes.joinButton}
+            onClick={() => onJoinClass(daySchedule.day, currentClass)}
+          >
+            Join Class
+          </Button>
         </Box>
       ) : (
-        <Box className={classes.classInfo}>
-          <Typography className={classes.noClassText}>
-            No classes scheduled
-          </Typography>
-        </Box>
+        <Typography className={classes.noClass}>
+          No classes scheduled
+        </Typography>
       )}
-    </Paper>
+    </Box>
   );
 };
 
-export default Daybox;
+export default DayBox;
 
+
+// import React from 'react';
+// import { Box, Typography, Button } from '@mui/material';
+// import { useStyles } from './styles';
+
+// const Daybox = ({ daySchedule }) => {
+//   const classes = useStyles();
+//   const hasClass = daySchedule.classes.length > 0;
+//   const currentClass = hasClass ? daySchedule.classes[0] : null;
+
+//   const handleJoinClass = () => {
+//     if (currentClass?.joinLink) {
+//       window.open(currentClass.joinLink, '_blank');
+//     }
+//   };
+
+//   return (
+//     <Box className={`${classes.dayBox} ${hasClass ? classes.hasClass : ''}`}>
+//       <Typography className={classes.dayName}>
+//         {daySchedule.day}
+//       </Typography>
+      
+//       {hasClass ? (
+//         <Box className={classes.classInfo}>
+//           <Typography className={classes.timeSlot}>
+//             {currentClass.time}
+//           </Typography>
+//           <Typography className={classes.classTitle}>
+//             {currentClass.title}
+//           </Typography>
+//           {currentClass.instructor && (
+//             <Typography className={classes.instructor}>
+//               with {currentClass.instructor}
+//             </Typography>
+//           )}
+//           <Button
+//             variant="contained"
+//             className={classes.joinButton}
+//             onClick={handleJoinClass}
+//           >
+//             Join Class
+//           </Button>
+//         </Box>
+//       ) : (
+//         <Typography className={classes.noClass}>
+//           No classes scheduled
+//         </Typography>
+//       )}
+//     </Box>
+//   );
+// };
+
+// export default Daybox;

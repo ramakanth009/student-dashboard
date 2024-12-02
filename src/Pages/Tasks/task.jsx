@@ -265,171 +265,845 @@ const fullStackTasks = [
 const dataScienceTasks = [
   {
     id: 1,
-    title: "Python Fundamentals Project: Text-Based Adventure Game",
-    description: `**Project Overview**
-Build a text-based adventure game to practice fundamental Python programming concepts including variables, control flow, data structures, and functions.
-
-  **Core Components**
-* **Game Structure**
-  * Welcome interface and player initialization
-  * Game state management
-  * Multiple storyline paths
-  * Score tracking system
-  
-* **Technical Implementation**
-  * Variable and data structure usage
-  * Control flow implementation
-  * Function definitions
-  * Error handling
-  
-* **Code Organization**
-  * Modular code structure
-  * Documentation
-  * Clean code practices`,
-    skills: ["Python", "Control Flow", "Data Structures", "Functions"],
+    title: "Simple Text-Based Adventure Game",
+    description: "Develop a text-based adventure game in Python where players navigate through locations, make choices, collect items, and progress toward a win or loss condition. The game utilizes Python basics, control flow, and data structures to create an engaging experience.",
+    skills: [
+      "Python Basics: Variables, Functions, Input/Output, Comments",
+      "Control Flow: if-else Statements, Loops (while, for)",
+      "Data Structures: Lists, Tuples, Dictionaries",
+      "Exception Handling: try-except",
+      "Modular Code Design"
+    ],
     components: [
-      "Game Interface",
-      "State Management",
-      "Error Handling",
-      "Data Structures Implementation",
+      "Python file text_based_game.py",
+      "Variables for player state",
+      "Location system",
+      "Game progression logic"
     ],
     steps: [
-      "**Project Setup**",
-      "1. Create a new Python file named 'adventure_game.py'",
-      "2. Set up the basic game structure with welcome message",
-      "3. Implement player initialization and game state variables",
-
-      "**Core Development**",
-      "4. Create the main game loop and control flow structure",
-      "5. Implement game locations and navigation system",
-      "6. Add inventory system using appropriate data structures",
-
-      "**Advanced Features**",
-      "7. Implement score tracking and game state persistence",
-      "8. Add error handling for user inputs",
-      "9. Create help system and game instructions",
-
-      "**Finalization**",
-      "10. Test all game paths and fix any bugs",
-      "11. Add comments and documentation",
-      "12. Create README with game instructions",
+      "Create a Python file text_based_game.py and define variables for player state and locations",
+      "Print a welcome message and prompt the player for their name",
+      "Use if-else and while loop for decision-making and game progression",
+      "Use a dictionary for locations and a list for the inventory",
+      "Create functions for actions like moving, collecting items, and viewing inventory",
+      "Define winning and losing conditions based on the game state",
+      "Handle invalid inputs using try-except",
+      "Add comments and test thoroughly to ensure functionality"
     ],
-    status: "To Do",
+    status: "To Do"
   },
   {
     id: 2,
-    title: "Data Analysis with Pandas: Market Analysis Project",
-    description: `**Project Overview**
-Conduct a comprehensive market analysis using real-world data, implementing data cleaning, analysis, and visualization techniques with Pandas and related libraries.
-
-**Required Skills**
-* Python & Pandas
-* Data Cleaning
-* Statistical Analysis
-* Data Visualization
-
-**Core Components**
-* **Data Preprocessing**
-  * Data loading and cleaning
-  * Missing value treatment
-  * Feature engineering
-  
-* **Analysis Pipeline**
-  * Exploratory Data Analysis (EDA)
-  * Statistical computations
-  * Trend analysis
-  
-* **Visualization Dashboard**
-  * Interactive charts
-  * Trend visualization
-  * Statistical plots`,
-    skills: ["Python", "Pandas", "Data Analysis", "Visualization"],
+    title: "Inventory Management System",
+    description: "Create an inventory management system using lambda functions, modules, and file handling to manage items and their quantities interactively.",
+    skills: [
+      "Python Basics: Functions, Dictionaries",
+      "Lambda Functions: Filtering, Sorting",
+      "File Handling: Reading/Writing Files, Exception Handling",
+      "Modular Code Design"
+    ],
     components: [
-      "Data Preprocessing",
-      "Analysis Pipeline",
-      "Visualization Dashboard",
-      "Documentation",
+      "inventory_management.py",
+      "Functions for CRUD operations",
+      "File handling system",
+      "User interface"
     ],
     steps: [
-      "**Initial Setup**",
-      "1. Set up your Jupyter notebook environment",
-      "2. Import required libraries and datasets",
-      "3. Perform initial data inspection",
-
-      "**Data Cleaning**",
-      "4. Handle missing values and outliers",
-      "5. Normalize and standardize data",
-      "6. Create derived features",
-
-      "**Analysis**",
-      "7. Conduct Exploratory Data Analysis",
-      "8. Perform statistical tests",
-      "9. Generate insights from data",
-
-      "**Visualization**",
-      "10. Create comprehensive visualizations",
-      "11. Build interactive dashboard",
-      "12. Document findings and insights",
+      "Create inventory_management.py and define functions for adding, removing, and viewing inventory",
+      "Use a dictionary to store inventory items and their quantities",
+      "Implement lambda functions to filter and sort inventory data",
+      "Add file handling to save/load inventory and handle exceptions for invalid operations",
+      "Build an interactive menu for user actions and thoroughly test the system"
     ],
-    status: "To Do",
+    status: "To Do"
   },
   {
     id: 3,
-    title: "Machine Learning: Customer Segmentation Project",
-    description: `**Project Overview**
-Develop a machine learning model to segment customers based on their behavior and characteristics, implementing clustering algorithms and evaluation metrics.
-
-**Required Skills**
-* Python & Scikit-learn
-* Clustering Algorithms
-* Feature Engineering
-* Model Evaluation
-
-**Core Components**
-* **Data Preparation**
-  * Feature selection
-  * Data preprocessing
-  * Scaling and normalization
-  
-* **Model Development**
-  * Algorithm selection
-  * Parameter tuning
-  * Model validation
-  
-* **Results Analysis**
-  * Cluster interpretation
-  * Visualization
-  * Business insights`,
-    skills: ["Python", "Scikit-learn", "Clustering", "Data Preprocessing"],
+    title: "Library Management System",
+    description: "Develop a library management system using OOP concepts to manage a collection of books with features for adding, removing, and searching.",
+    skills: [
+      "OOP: Classes, Objects, Encapsulation, Polymorphism",
+      "Exception Handling: Duplicate/Invalid Operations",
+      "Advanced Python Functions",
+      "Modular Design"
+    ],
     components: [
-      "Data Preparation",
-      "Model Development",
-      "Results Analysis",
-      "Documentation",
+      "library_management.py",
+      "Book class",
+      "Library class",
+      "Search functionality"
     ],
     steps: [
-      "**Project Setup**",
-      "1. Import and prepare customer dataset",
-      "2. Perform feature selection and engineering",
-      "3. Scale and normalize features",
-
-      "**Model Development**",
-      "4. Implement clustering algorithms",
-      "5. Tune model parameters",
-      "6. Validate clustering results",
-
-      "**Analysis & Reporting**",
-      "7. Interpret cluster characteristics",
-      "8. Create visualization of segments",
-      "9. Document insights and recommendations",
-
-      "**Deployment**",
-      "10. Prepare model for deployment",
-      "11. Create prediction pipeline",
-      "12. Write technical documentation",
+      "Create library_management.py with Book and Library classes",
+      "Use attributes for book details (title, author, ISBN) and methods for library operations",
+      "Implement encapsulation to secure sensitive data and polymorphism for specific book types",
+      "Create an interactive menu for user actions and test all functionalities thoroughly"
     ],
-    status: "To Do",
+    status: "To Do"
   },
+  {
+    id: 4,
+    title: "Employee Management System",
+    description: "Create an employee management system utilizing advanced OOP concepts like inheritance, abstract classes, and decorators.",
+    skills: [
+      "OOP: Inheritance, Abstract Classes",
+      "Decorators: Logging Actions",
+      "Generators: Yielding Records Dynamically",
+      "Advanced OOP Concepts"
+    ],
+    components: [
+      "employee_management.py",
+      "Employee base class",
+      "Subclass implementations",
+      "Logging system"
+    ],
+    steps: [
+      "Create employee_management.py with Employee and subclass classes like Manager and Developer",
+      "Use an abstract class for common methods like calculate_salary()",
+      "Add decorators to log employee actions and a generator to iterate through records",
+      "Build a menu for managing employee records and test functionalities extensively"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 5,
+    title: "Integrated Data Analysis Project",
+    description: "Perform integrated data analysis using NumPy, Pandas, and Matplotlib for numerical operations, data manipulation, and visualization.",
+    skills: [
+      "Libraries: NumPy, Pandas, Matplotlib",
+      "Data Manipulation: Handling Missing Data, Feature Engineering",
+      "Data Visualization: Scatter Plots, Histograms, Line Plots",
+      "Statistical Analysis"
+    ],
+    components: [
+      "data_analysis_project.py",
+      "Data processing pipeline",
+      "Visualization module",
+      "Analysis functions"
+    ],
+    steps: [
+      "Create data_analysis_project.py and generate random data using NumPy",
+      "Convert the data into a Pandas DataFrame and perform statistical analysis",
+      "Handle missing data, create derived features, and visualize data using Matplotlib",
+      "Document the process with comments and test all operations"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 6,
+    title: "Simple Web Application",
+    description: "Develop a basic web application using Django, Flask, or Streamlit to present data analysis results interactively.",
+    skills: [
+      "Framework Basics: Django, Flask, or Streamlit",
+      "Web Development: Routing, Views, Templates",
+      "Data Presentation: Integrating Results",
+      "Web Application Design"
+    ],
+    components: [
+      "Web application files",
+      "Routes and views",
+      "Templates",
+      "Data integration"
+    ],
+    steps: [
+      "Choose a framework and create the project (simple_web_app, flask_app.py, or streamlit_app.py)",
+      "Install necessary libraries (pip install django/flask/streamlit) and define views for displaying analysis results",
+      "Use templates in Django/Flask or customize layout in Streamlit for user-friendly data presentation",
+      "Test the web application in a browser and document the process in the README"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 7,
+    title: "Create a Database System",
+    description: "Develop a basic database system to understand SQL fundamentals. This project involves creating a database, defining tables, inserting data, and retrieving information using SQL queries. Key concepts include DDL operations (CREATE, ALTER, DROP), basic querying, and data filtering.",
+    skills: [
+      "Basic SQL syntax and statements",
+      "Understanding of DDL commands",
+      "Querying data using SELECT, WHERE, and ORDER BY",
+      "Database Design",
+      "Data Filtering"
+    ],
+    components: [
+      "CompanyDB database",
+      "Employees table",
+      "Departments table",
+      "Query module"
+    ],
+    steps: [
+      "Install and set up a local SQL environment (e.g., MySQL)",
+      "Create a database named CompanyDB",
+      "Define two tables: Employees (ID, Name, Position, Salary) and Departments (ID, DepartmentName)",
+      "Insert sample data into both tables to simulate a working dataset",
+      "Write SELECT queries to retrieve and filter employee details",
+      "Use ORDER BY to sort data by specified columns",
+      "Experiment with ALTER TABLE to modify the schema by adding columns"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 8,
+    title: "Manage Employee Data",
+    description: "Enhance a database by implementing constraints, performing data manipulation, and using set operations. Learn how constraints ensure data integrity, DML commands update records, and set operations analyze data across tables.",
+    skills: [
+      "Implementing constraints (Primary Key, Foreign Key)",
+      "Using DML commands (INSERT, UPDATE, DELETE)",
+      "Performing set operations (UNION, INTERSECT)",
+      "Data Integrity Management",
+      "Database Operations"
+    ],
+    components: [
+      "Enhanced database schema",
+      "Constraint system",
+      "Projects table",
+      "Data manipulation module"
+    ],
+    steps: [
+      "Add constraints to the Employees table: Primary Key on ID and Unique on Name",
+      "Create a Projects table with columns ProjectID, ProjectName, and EmployeeID (Foreign Key referencing Employees.ID)",
+      "Insert records into the Employees and Projects tables using INSERT INTO",
+      "Update employee details such as salaries using UPDATE",
+      "Remove records from tables using DELETE",
+      "Use UNION to combine employee and project data",
+      "Use INTERSECT to find commonalities in project assignments"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 9,
+    title: "Analyze Employee and Project Data",
+    description: "Perform data analysis on a company database to calculate statistics, manipulate strings, and apply advanced filtering. Use joins to integrate data from multiple tables and extract meaningful insights.",
+    skills: [
+      "Using SQL functions (aggregate, string, numeric, date)",
+      "Advanced filtering (LIKE, IN, BETWEEN)",
+      "Joining tables (INNER, LEFT, RIGHT, FULL OUTER)",
+      "Data Analysis",
+      "Query Optimization"
+    ],
+    components: [
+      "Analysis functions",
+      "Advanced filters",
+      "Join operations",
+      "Statistical computations"
+    ],
+    steps: [
+      "Use aggregate functions like SUM, AVG, MIN, MAX to analyze salary and project data",
+      "Apply string functions such as CONCAT to combine fields and UPPER/LOWER to format text",
+      "Filter data with LIKE for patterns, IN for lists, and BETWEEN for ranges",
+      "Write INNER JOIN queries to combine employee and project details",
+      "Use LEFT JOIN to find employees without assigned projects",
+      "Experiment with FULL OUTER JOIN to view all employees and projects together"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 10,
+    title: "Implement and Analyze Transactions",
+    description: "Implement transactions and indexing in a database to ensure data integrity, optimize performance, and analyze data. Learn how to use subqueries for complex analyses and manage data changes using transactions.",
+    skills: [
+      "Writing subqueries (simple and correlated)",
+      "Implementing transactions (COMMIT, ROLLBACK)",
+      "Creating and analyzing indexes",
+      "Performance Optimization",
+      "Transaction Management"
+    ],
+    components: [
+      "Transaction system",
+      "Index management",
+      "Subquery module",
+      "Performance analyzer"
+    ],
+    steps: [
+      "Write subqueries to analyze data, such as employees earning above the average salary",
+      "Use COMMIT and ROLLBACK to manage transactions and ensure data consistency",
+      "Test ACID properties by simulating failures during transactions",
+      "Create indexes on frequently queried fields, such as Name or DepartmentID",
+      "Compare query execution times with and without indexes to evaluate performance"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 11,
+    title: "Advanced SQL Features Implementation",
+    description: "Explore advanced SQL features like views, stored procedures, and triggers to enhance database management. Learn to create reusable and automated solutions for common tasks.",
+    skills: [
+      "Creating and managing views",
+      "Writing stored procedures and functions",
+      "Implementing triggers for automated actions",
+      "Database Automation",
+      "Advanced SQL Concepts"
+    ],
+    components: [
+      "View system",
+      "Stored procedures",
+      "Trigger framework",
+      "Function library"
+    ],
+    steps: [
+      "Create views for commonly accessed datasets, such as employee and project summaries",
+      "Develop stored procedures for operations like adding employees or updating project statuses",
+      "Write SQL functions to calculate specific metrics or transform data",
+      "Implement triggers to log changes during INSERT, UPDATE, or DELETE operations",
+      "Test triggers to verify automation for tasks like change tracking or notifications"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 12,
+    title: "Exploratory Data Analysis (EDA) with Basic Statistics",
+    description: "Perform EDA on a real-world dataset to summarize the data using descriptive statistics, visualize distributions with appropriate plots, and generate actionable insights.",
+    skills: [
+      "Descriptive statistics (mean, median, mode, variance, standard deviation)",
+      "Data visualization using histograms, box plots, and scatter plots",
+      "Identifying outliers, patterns, and trends",
+      "Statistical Analysis",
+      "Data Interpretation"
+    ],
+    components: [
+      "Statistical analysis module",
+      "Visualization system",
+      "Outlier detection",
+      "Pattern recognition module"
+    ],
+    steps: [
+      "Select a dataset with numerical and categorical variables (e.g., customer purchase data, housing prices)",
+      "Compute basic summary statistics: central tendency (mean, median, mode) and dispersion (range, variance, standard deviation)",
+      "Create histograms to visualize distributions of numerical variables",
+      "Generate box plots to identify outliers in the data",
+      "Plot scatter plots to analyze relationships between numerical variables",
+      "Analyze distributions, patterns, and outliers, and document key insights"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 13,
+    title: "Linear Regression with Gradient Descent",
+    description: "Implement linear regression from scratch using gradient descent, visualize the cost function convergence, and understand the underlying mathematical principles.",
+    skills: [
+      "Linear regression fundamentals",
+      "Gradient descent optimization",
+      "Python programming for numerical computations",
+      "Visualization techniques",
+      "Mathematical modeling"
+    ],
+    components: [
+      "Linear regression implementation",
+      "Gradient descent optimizer",
+      "Cost function calculator",
+      "Visualization module"
+    ],
+    steps: [
+      "Review the theory of linear regression and gradient descent",
+      "Select a dataset with features and a target variable (e.g., housing prices, salary vs. experience)",
+      "Implement linear regression from scratch using Python",
+      "Define the cost function (Mean Squared Error) and initialize model parameters",
+      "Implement the gradient descent algorithm to iteratively minimize the cost function",
+      "Experiment with different learning rates to observe the convergence behavior",
+      "Plot the cost function over iterations to visualize convergence",
+      "Fit the regression line to the dataset and analyze the results"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 14,
+    title: "Dimensionality Reduction with Principal Component Analysis (PCA)",
+    description: "Apply PCA to a high-dimensional dataset to reduce dimensions, visualize results, and evaluate the trade-offs between dimensionality reduction and information retention.",
+    skills: [
+      "Understanding PCA concepts (eigenvalues, eigenvectors)",
+      "Data preprocessing (standardization)",
+      "Visualization of high-dimensional data",
+      "Dimensionality reduction techniques",
+      "Trade-off analysis"
+    ],
+    components: [
+      "PCA implementation",
+      "Data standardizer",
+      "Visualization system",
+      "Variance analyzer"
+    ],
+    steps: [
+      "Review the mathematical foundation of PCA",
+      "Select a high-dimensional dataset (e.g., image data, sensor data)",
+      "Standardize the dataset to normalize feature scales",
+      "Compute principal components using a Python library like sklearn",
+      "Create a scree plot to visualize the variance explained by each principal component",
+      "Reduce the dimensions of the dataset to 2D or 3D using PCA",
+      "Create scatter plots to visualize the reduced dataset and observe patterns",
+      "Analyze the variance retained and discuss the trade-offs of dimensionality reduction"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 15,
+    title: "Data Cleaning and Transformation Pipeline",
+    description: "Develop a Python pipeline to clean raw data, handle missing values, and transform it into an analysis-ready format.",
+    skills: [
+      "Data cleaning (handling missing values, removing duplicates)",
+      "Data transformation (normalization, categorical encoding)",
+      "Automation using Python functions",
+      "Pipeline development",
+      "Data validation"
+    ],
+    components: [
+      "Data cleaning module",
+      "Transformation pipeline",
+      "Missing value handler",
+      "Data validator"
+    ],
+    steps: [
+      "Select a messy dataset with missing values, duplicates, and categorical variables",
+      "Identify and handle missing values using mean or median imputation or by removing rows",
+      "Detect and remove duplicate records from the dataset",
+      "Convert columns to appropriate data types (e.g., datetime, integers, floats)",
+      "Normalize numerical features using min-max scaling or standardization",
+      "Encode categorical variables using one-hot encoding or label encoding",
+      "Write a Python function or script to automate the data cleaning and transformation steps"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 16,
+    title: "Visual Analysis of High-Dimensional Data",
+    description: "Use advanced visualization techniques to analyze high-dimensional datasets and uncover patterns or insights.",
+    skills: [
+      "Advanced data visualization using Seaborn and Matplotlib",
+      "Analyzing correlation and pairwise relationships",
+      "Pattern detection through visual analysis",
+      "High-dimensional data analysis",
+      "Statistical visualization"
+    ],
+    components: [
+      "Visualization system",
+      "Correlation analyzer",
+      "Pattern detector",
+      "Report generator"
+    ],
+    steps: [
+      "Select a high-dimensional dataset (e.g., customer segmentation data, gene expression data)",
+      "Create pair plots to visualize pairwise relationships between features",
+      "Generate a heatmap to visualize the correlation matrix among numerical variables",
+      "Use violin plots to analyze the distribution of a continuous variable split by a categorical feature",
+      "Identify patterns, correlations, and trends from the visualizations",
+      "Document findings and insights based on the visual analyses"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 17,
+    title: "Comprehensive EDA and Insights Presentation",
+    description: "Perform a full-scale EDA on a dataset, detect outliers, conduct hypothesis testing, and present findings effectively using data storytelling techniques.",
+    skills: [
+      "EDA techniques (summary statistics, outlier detection)",
+      "Hypothesis testing (t-tests, chi-square tests)",
+      "Data storytelling and presentation skills",
+      "Statistical inference",
+      "Communication techniques"
+    ],
+    components: [
+      "EDA module",
+      "Statistical testing framework",
+      "Visualization system",
+      "Presentation generator"
+    ],
+    steps: [
+      "Select a dataset from a relevant domain (e.g., health data, customer churn data)",
+      "Compute summary statistics: central tendency and dispersion measures",
+      "Detect outliers using Z-score and IQR methods",
+      "Create visualizations (histograms, box plots, scatter plots) to analyze data distributions and outliers",
+      "Formulate hypotheses (e.g., differences between groups) and perform statistical tests like t-tests or chi-square tests",
+      "Compile findings, including visualizations and statistical test results",
+      "Create a presentation using PowerPoint or Jupyter Notebook to communicate insights effectively"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 18,
+    title: "Decision Tree and Random Forest for Classification",
+    description: "Build and evaluate decision tree and random forest models to classify a real-world dataset (e.g., predicting customer churn or loan default).",
+    skills: [
+      "Python, scikit-learn",
+      "Data Preprocessing (handling missing data, encoding categorical variables)",
+      "Model Evaluation (accuracy, precision, recall, F1 score, ROC-AUC)",
+      "Data Visualization (decision trees, feature importance)",
+      "Classification Algorithms"
+    ],
+    components: [
+      "Decision Tree Model",
+      "Random Forest Model",
+      "Evaluation Module",
+      "Visualization System"
+    ],
+    steps: [
+      "Choose a dataset with a classification task (e.g., UCI Adult dataset)",
+      "Preprocess the data (handle missing values, encode categorical variables, normalize/standardize features)",
+      "Build a decision tree model using scikit-learn's DecisionTreeClassifier",
+      "Visualize the decision tree using plot_tree or Graphviz",
+      "Build a random forest model using RandomForestClassifier",
+      "Evaluate both models using cross-validation and performance metrics (accuracy, precision, recall, F1 score, ROC-AUC)",
+      "Compare decision tree and random forest models based on performance metrics and feature importance"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 19,
+    title: "KNN, Logistic Regression, and SVM for Multi-Class Classification",
+    description: "Implement K-Nearest Neighbors (KNN), Logistic Regression, and Support Vector Machine (SVM) algorithms to classify a complex dataset (e.g., MNIST digit dataset) and compare their performance.",
+    skills: [
+      "Python, scikit-learn",
+      "Data Preprocessing (standardization, train-test split)",
+      "Classification Algorithms (KNN, Logistic Regression, SVM)",
+      "Model Evaluation (accuracy, confusion matrix, classification report, ROC-AUC)",
+      "Algorithm Comparison"
+    ],
+    components: [
+      "KNN Classifier",
+      "Logistic Regression Model",
+      "SVM Implementation",
+      "Evaluation Framework"
+    ],
+    steps: [
+      "Choose a multi-class classification dataset (e.g., MNIST, Fashion MNIST)",
+      "Standardize the dataset using StandardScaler",
+      "Split the data into training and testing sets using train_test_split",
+      "Implement KNN using KNeighborsClassifier and experiment with different values of K",
+      "Implement Logistic Regression using LogisticRegression for multiclass classification",
+      "Implement SVM using SVC with linear and RBF kernels",
+      "Evaluate all models using metrics such as accuracy, confusion matrix, classification report, and ROC-AUC curves",
+      "Compare performance using cross-validation and evaluate decision boundaries if applicable"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 20,
+    title: "House Price Prediction with Regularization and Gradient Boosting",
+    description: "Build a robust house price prediction model using regularization techniques (Lasso and Ridge Regression) and gradient boosting methods (AdaBoost, XGBoost) to minimize overfitting and improve accuracy.",
+    skills: [
+      "Python, scikit-learn, XGBoost",
+      "Regression Algorithms (Ridge, Lasso, AdaBoost, XGBoost)",
+      "Model Evaluation (RMSE, R² score, residual analysis)",
+      "Feature Engineering (interaction terms, polynomial features)",
+      "Hyperparameter Tuning"
+    ],
+    components: [
+      "Regularization Models",
+      "Boosting Models",
+      "Feature Engineering Module",
+      "Evaluation System"
+    ],
+    steps: [
+      "Choose a regression dataset (e.g., Kaggle House Prices)",
+      "Preprocess the data (handle missing values, feature scaling, encode categorical variables)",
+      "Implement Ridge and Lasso regression models using Ridge and Lasso from scikit-learn",
+      "Implement AdaBoost and XGBoost regression models using AdaBoostRegressor and XGBRegressor",
+      "Tune hyperparameters of the boosting models for better performance",
+      "Evaluate all models using RMSE and R² score",
+      "Compare the performance of regularization and boosting techniques",
+      "Visualize feature importance and residuals"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 21,
+    title: "Customer Segmentation with Clustering and PCA",
+    description: "Use clustering techniques (K-Means, DBSCAN) to segment customers based on their purchasing behavior and reduce the dimensions of the data using Principal Component Analysis (PCA).",
+    skills: [
+      "Python, scikit-learn",
+      "Clustering Algorithms (K-Means, DBSCAN)",
+      "Dimensionality Reduction (PCA)",
+      "Evaluation Metrics (silhouette score, inertia)",
+      "Customer Analytics"
+    ],
+    components: [
+      "Clustering Models",
+      "PCA Implementation",
+      "Evaluation Module",
+      "Visualization System"
+    ],
+    steps: [
+      "Choose a customer segmentation dataset (e.g., Mall Customers dataset)",
+      "Clean and standardize the data",
+      "Apply PCA for dimensionality reduction",
+      "Implement K-Means clustering using KMeans and experiment with different values of K",
+      "Implement DBSCAN clustering using DBSCAN to identify noise and non-convex clusters",
+      "Evaluate clusters using silhouette score and inertia",
+      "Visualize the clusters using 2D/3D scatter plots after PCA reduction",
+      "Present actionable insights based on customer segments"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 22,
+    title: "Market Basket Analysis with Association Rule Learning and Ensemble Methods",
+    description: "Implement association rule learning for market basket analysis and use ensemble methods (Bagging and Boosting) to refine predictions for customer behavior.",
+    skills: [
+      "Python, mlxtend (for Apriori algorithm)",
+      "Association Rule Learning (Apriori, association rules)",
+      "Ensemble Methods (Bagging, Boosting)",
+      "Evaluation Metrics (support, confidence, lift)",
+      "Market Analysis"
+    ],
+    components: [
+      "Apriori Implementation",
+      "Ensemble Models",
+      "Rule Generator",
+      "Evaluation System"
+    ],
+    steps: [
+      "Choose a transactional dataset (e.g., Online Retail dataset)",
+      "Convert transaction data into a binary matrix (itemsets)",
+      "Apply the Apriori algorithm using apriori from mlxtend",
+      "Generate association rules using association_rules",
+      "Implement Bagging and Boosting techniques for predicting customer purchases",
+      "Evaluate association rules using support, confidence, and lift",
+      "Compare the performance of ensemble techniques using classification metrics",
+      "Present the findings in a report or presentation with key insights from the analysis"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 23,
+    title: "Game-Playing Agent with Q-Learning",
+    description: "Build a simple game-playing agent using reinforcement learning (Q-learning) to solve a basic game environment, such as a gridworld or a simple maze.",
+    skills: [
+      "Python, OpenAI Gym",
+      "Reinforcement Learning (Q-learning, epsilon-greedy)",
+      "Environment Setup (Gridworld, Maze)",
+      "Performance Evaluation (cumulative rewards, number of steps)",
+      "Agent Implementation"
+    ],
+    components: [
+      "Q-Learning Agent",
+      "Game Environment",
+      "Training System",
+      "Performance Monitor"
+    ],
+    steps: [
+      "Set up a basic game environment (e.g., Gridworld or Maze) using OpenAI Gym",
+      "Implement the Q-learning algorithm, defining the state-action value function",
+      "Define the reward structure and exploration-exploitation strategy (epsilon-greedy)",
+      "Train the agent by running multiple episodes",
+      "Monitor the agent's performance by plotting cumulative rewards and Q-value updates",
+      "Evaluate the agent's performance by tracking the number of steps required to solve the environment",
+      "Summarize the learning experiences and suggest potential improvements"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 24,
+    title: "Neural Network for Binary Classification",
+    description: "Develop a simple neural network to classify data points into two categories, such as distinguishing between spam and non-spam emails.",
+    skills: [
+      "Python, TensorFlow/PyTorch",
+      "Neural Networks, Backpropagation",
+      "Gradient Descent, Loss Functions (Cross-Entropy, MSE)",
+      "Model Evaluation (accuracy, precision, recall, F1-score)",
+      "Binary Classification"
+    ],
+    components: [
+      "Neural Network Model",
+      "Training Module",
+      "Loss Function Implementation",
+      "Evaluation System"
+    ],
+    steps: [
+      "Implement a neural network using TensorFlow or PyTorch",
+      "Use backpropagation and gradient descent for training",
+      "Experiment with different loss functions: Cross-Entropy and Mean Squared Error",
+      "Experiment with optimization algorithms: SGD and Adam",
+      "Train the model on a dataset (e.g., spam vs non-spam emails)",
+      "Evaluate the model's performance using accuracy, precision, recall, and F1-score",
+      "Generate a performance report with metrics"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 25,
+    title: "Image Classification Using CNNs",
+    description: "Build and train a Convolutional Neural Network (CNN) to classify images from a dataset such as CIFAR-10 or MNIST.",
+    skills: [
+      "Python, TensorFlow/Keras",
+      "CNN Architecture (Convolutional, Pooling, Fully Connected layers)",
+      "Transfer Learning (VGG16, ResNet)",
+      "Model Evaluation (accuracy, confusion matrix, precision, recall, F1-score)",
+      "Image Processing"
+    ],
+    components: [
+      "CNN Model",
+      "Data Pipeline",
+      "Training System",
+      "Evaluation Framework"
+    ],
+    steps: [
+      "Develop a basic CNN architecture (Convolutional, Pooling, Fully Connected layers)",
+      "Optionally, implement transfer learning using pre-trained models like VGG16 or ResNet",
+      "Train the CNN on CIFAR-10 or MNIST dataset",
+      "Evaluate the model with accuracy, precision, recall, and F1-score",
+      "Visualize model predictions with graphs (confusion matrix, accuracy plots)",
+      "Report on model performance and improvement suggestions"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 26,
+    title: "Text Prediction Using LSTM",
+    description: "Develop a Long Short-Term Memory (LSTM) model to predict the next word in a sequence from a text corpus.",
+    skills: [
+      "Python, TensorFlow/Keras",
+      "LSTM Networks",
+      "Text Preprocessing (tokenization, word embeddings)",
+      "Model Evaluation (accuracy, perplexity)",
+      "Sequence Modeling"
+    ],
+    components: [
+      "LSTM Model",
+      "Text Preprocessor",
+      "Training Pipeline",
+      "Prediction System"
+    ],
+    steps: [
+      "Preprocess the text data (cleaning, tokenizing, creating sequences)",
+      "Use word embeddings like Word2Vec or GloVe to represent words numerically",
+      "Build an LSTM model to predict the next word in a sentence",
+      "Train the model on a text corpus",
+      "Evaluate the model using accuracy and perplexity",
+      "Provide a performance report with evaluation metrics"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 27,
+    title: "Sentiment Analysis Using BERT",
+    description: "Develop a sentiment analysis model using the BERT (Bidirectional Encoder Representations from Transformers) model.",
+    skills: [
+      "Python, HuggingFace Transformers",
+      "Pre-trained Models (BERT)",
+      "NLP Tasks (Sentiment Analysis, Named Entity Recognition)",
+      "Model Evaluation (precision, recall, F1-score, accuracy)",
+      "Fine-tuning Techniques"
+    ],
+    components: [
+      "BERT Model",
+      "Fine-tuning Module",
+      "Sentiment Analyzer",
+      "Evaluation Framework"
+    ],
+    steps: [
+      "Fine-tune the BERT model on a custom sentiment dataset (e.g., product reviews)",
+      "Implement additional NLP tasks like Named Entity Recognition (NER)",
+      "Train the model for sentiment classification",
+      "Evaluate the model using precision, recall, F1-score, and accuracy",
+      "Visualize sentiment predictions and NER results",
+      "Provide a performance report with metrics and insights"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 28,
+    title: "Text Generation with GANs",
+    description: "Build a Generative Adversarial Network (GAN) for generating coherent text sequences.",
+    skills: [
+      "Python, TensorFlow/Keras",
+      "GANs (Generator, Discriminator)",
+      "Text Generation, Sequence Modeling",
+      "Evaluation Metrics (BLEU score, human evaluation)",
+      "Model Architecture Design"
+    ],
+    components: [
+      "Generator Network",
+      "Discriminator Network",
+      "Training Pipeline",
+      "Evaluation System"
+    ],
+    steps: [
+      "Prepare a small text corpus for GAN training",
+      "Develop the Generator and Discriminator networks",
+      "Train the GAN to generate coherent text sequences",
+      "Evaluate the generated text using human evaluation techniques",
+      "Optionally, use BLEU score for text evaluation",
+      "Provide examples of generated text and evaluation results"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 29,
+    title: "Image Compression with VAEs",
+    description: "Develop a Variational Autoencoder (VAE) to compress images by reducing their dimensionality while preserving key features.",
+    skills: [
+      "Python, TensorFlow/Keras",
+      "Variational Autoencoders (VAE)",
+      "Image Compression",
+      "Reconstruction Error (MSE, visualizations)",
+      "Latent Space Modeling"
+    ],
+    components: [
+      "VAE Model",
+      "Encoder Network",
+      "Decoder Network",
+      "Evaluation Module"
+    ],
+    steps: [
+      "Train a VAE on an image dataset (e.g., CIFAR-10, MNIST)",
+      "Experiment with different latent space dimensions to balance compression and quality",
+      "Evaluate the VAE using reconstruction error (MSE)",
+      "Visualize the reconstructed images and latent space",
+      "Provide a performance report with evaluation metrics"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 30,
+    title: "Deploying an Image Classification Model",
+    description: "Deploy an image classification model using TensorFlow Serving or FastAPI, making it accessible through an API.",
+    skills: [
+      "Python, TensorFlow/FastAPI",
+      "Model Deployment",
+      "SHAP (SHapley Additive Explanations)",
+      "Real-time Predictions",
+      "API Development"
+    ],
+    components: [
+      "Deployment System",
+      "API Interface",
+      "Model Interpreter",
+      "Performance Monitor"
+    ],
+    steps: [
+      "Train an image classification model (e.g., CNN) on a dataset (e.g., CIFAR-10)",
+      "Implement SHAP to interpret the model's predictions",
+      "Deploy the model using TensorFlow Serving or FastAPI to create an API for real-time predictions",
+      "Test the API with live data and evaluate predictions",
+      "Provide a report with model interpretation and API usage"
+    ],
+    status: "To Do"
+  },
+  {
+    id: 31,
+    title: "End-to-End Deep Learning Solution",
+    description: "Develop a comprehensive end-to-end deep learning solution that integrates multiple techniques covered throughout the course.",
+    skills: [
+      "Python, TensorFlow/PyTorch",
+      "Image Classification, Text Analysis",
+      "Model Evaluation",
+      "Model Deployment",
+      "System Integration"
+    ],
+    components: [
+      "Multiple Deep Learning Models",
+      "Integration Framework",
+      "Deployment System",
+      "Evaluation Module"
+    ],
+    steps: [
+      "Choose a real-world use case (e.g., e-commerce recommendation or health diagnosis)",
+      "Integrate multiple deep learning techniques (CNNs for image classification, Transformers or BERT for text analysis)",
+      "Train and evaluate models for both image and text data",
+      "Deploy the solution and make it accessible for both image and text analysis",
+      "Present the project with a demonstration, evaluation metrics, and performance analysis",
+      "Provide a final report with insights and recommendations"
+    ],
+    status: "To Do"
+  }
+
 ];
 
 const fetchTasks = async (userTrack) => {

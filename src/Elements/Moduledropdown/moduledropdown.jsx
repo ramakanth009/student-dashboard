@@ -3,11 +3,80 @@ import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import { makeStyles } from '@mui/styles';
-
-// Import SVG as an image
 import slidedeckIcon from '../../Assets/slide_deck.svg';
 
 const useStyles = makeStyles({
+  // moduleBox: {
+  //   width: "100%",
+  //   backgroundColor: '#fff',
+  //   borderRadius: '20px',
+  //   marginBottom: '16px',
+  //   boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+  //   transition: 'all 0.3s ease-in-out',
+  //   '&.MuiAccordion-root': {
+  //     borderRadius: '0px 30px 0px 30px',
+  //   },
+  //   '&.MuiPaper-root': {
+  //     borderRadius: '0px 30px 0px 30px !important',
+  //   },
+  //   '&:hover': {
+  //     transform: 'translateY(-2px)',
+  //     boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+  //   },
+  //   '&::before': {
+  //     display: 'none',
+  //   },
+  // },
+  // moduleHeader: {
+  //   display: 'flex',
+  //   justifyContent: 'space-between',
+  //   alignItems: 'center',
+  //   width: '100%',
+  //   padding: '8px 0',
+  // },
+  // leftSection: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   gap: '8px',
+  // },
+  // rightSection: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   gap: '16px',
+  // },
+  // topicsList: {
+  //   listStyle: 'none',
+  //   padding: 0,
+  //   margin: 0,
+  // },
+  // topicItem: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   gap: '8px',
+  //   padding: '8px 0',
+  //   marginLeft: '20px',
+  //   position: 'relative',
+  //   '&::before': {
+  //     content: '"→"',
+  //     position: 'absolute',
+  //     left: '-20px',
+  //     color: '#1976d2',
+  //     fontWeight: 'bold',
+  //   }
+  // },
+  // moduleTitle: {
+  //   fontWeight: '500 !important',
+  //   color: '#333',
+  // },
+  // statusChip: {
+    // padding: '4px 12px',
+    // borderRadius: '16px',
+    // fontSize: '0.875rem',
+    // fontWeight: 500,
+    // display: 'inline-block',
+    // marginTop: '8px',
+    // width: 'fit-content',
+  // },
   moduleBox: {
     width:"100%",
     backgroundColor: '#fff',
@@ -140,6 +209,7 @@ const ModuleDropdown = ({
   index
 }) => {
   const classes = useStyles();
+  const userTrack = localStorage.getItem('userTrack') || 'fullStack';
 
   const getStatusStyle = (status) => {
     switch (status.toLowerCase()) {
@@ -155,14 +225,14 @@ const ModuleDropdown = ({
   };
 
   const handleVideoClick = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     if (videoUrl) {
       window.open(videoUrl, '_blank');
     }
   };
 
   const handleSlidesClick = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     if (slidesUrl) {
       window.open(slidesUrl, '_blank');
     }
@@ -209,6 +279,9 @@ const ModuleDropdown = ({
         </Box>
       </AccordionSummary>
       <AccordionDetails>
+        <Typography variant="subtitle1" className={classes.sectionTitle}>
+          {userTrack === 'fullStack' ? 'Topics to Cover:' : 'Learning Objectives:'}
+        </Typography>
         <ul className={classes.topicsList}>
           {topics.map((topic, idx) => (
             <li key={idx} className={classes.topicItem}>

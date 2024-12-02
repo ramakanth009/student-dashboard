@@ -1,3 +1,4 @@
+// moduledescription.jsx
 import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
       boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
     },
     '&.MuiPaper-root': {
-      backgroundColor: 'transparent !important', 
+      backgroundColor: 'transparent !important',
     },
   },
   title: {
@@ -40,17 +41,17 @@ const useStyles = makeStyles({
     listStyle: 'none',
     padding: 0,
     margin: 0,
-  },
-  listItem: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '8px 0',
-    color: '#555',
-    '&::before': {
-      content: '"•"',
-      color: '#1976d2',
-      fontWeight: 'bold',
+    '& li': {
+      position: 'relative',
+      paddingLeft: '20px',
+      marginBottom: '8px',
+      '&::before': {
+        content: '"→"',
+        position: 'absolute',
+        left: 0,
+        color: '#1976d2',
+        fontWeight: 'bold',
+      }
     }
   },
   highlight: {
@@ -65,24 +66,17 @@ const useStyles = makeStyles({
   }
 });
 
-const ModuleDescription = ({ 
-  moduleData = {
-    title: '',
-    subtitle: '',
-    description: '',
-    learningOutcomes: [],
-    prerequisites: [],
-    duration: '',
-    skillLevel: '',
-    highlightText: ''
-  } 
-}) => {
+const ModuleDescription = ({ moduleData = {} }) => {
   const classes = useStyles();
 
+  const formatList = (items = []) => {
+    return items.map(item => item.startsWith('→') ? item.substring(1).trim() : item);
+  };
+
   return (
-    <Paper className={classes.descriptionBox} elevation={0}> {/* Elevation={0} to make Paper transparent */}
+    <Paper className={classes.descriptionBox} elevation={0}>
       <Typography variant="h5" className={classes.title}>
-        {/* {moduleData.title} */}Overview 
+        Overview
       </Typography>
       
       <Typography variant="subtitle1" className={classes.subtitle}>
@@ -101,8 +95,8 @@ const ModuleDescription = ({
             Learning Outcomes
           </Typography>
           <ul className={classes.list}>
-            {moduleData.learningOutcomes.map((outcome, index) => (
-              <li key={index} className={classes.listItem}>
+            {formatList(moduleData.learningOutcomes).map((outcome, index) => (
+              <li key={index}>
                 <Typography variant="body1">{outcome}</Typography>
               </li>
             ))}
@@ -116,8 +110,8 @@ const ModuleDescription = ({
             Prerequisites
           </Typography>
           <ul className={classes.list}>
-            {moduleData.prerequisites.map((prerequisite, index) => (
-              <li key={index} className={classes.listItem}>
+            {formatList(moduleData.prerequisites).map((prerequisite, index) => (
+              <li key={index}>
                 <Typography variant="body1">{prerequisite}</Typography>
               </li>
             ))}

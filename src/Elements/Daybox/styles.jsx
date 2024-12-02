@@ -16,6 +16,7 @@ export const useStyles = makeStyles(() => ({
           transform: "translateY(-2px)",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08) !important",
         },
+        position:"relative  ",
       },
   emptyDayBox: {
     width: "100px", 
@@ -79,5 +80,7 @@ export const useStyles = makeStyles(() => ({
       backgroundColor: "#1565c0 !important",
       color:"#ffffff !important"
     },
+    position:"absolute",
+    bottom:"2px"
   },
 }));

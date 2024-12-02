@@ -1,104 +1,14 @@
+// module1.jsx
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ModuleDropdown from "../../../Elements/Moduledropdown/moduledropdown";
 import ModuleSwitcher from "../../../Elements/Moduleselector/moduleselector";
 import ModuleDescription from "../../../Elements/Moduledescription/moduledescription";
-const useStyles = makeStyles({
-  moduleContainer: {
-    width:"100%",
-    padding: "24px",
-    // backgroundColor: "#f5f5f5",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection:"column"
-  },
-  content:{
-    display:"flex",
-    gap:"10px"
-  },
-  header: {
-    marginBottom: "24px",
-  },
-  moduleTitle: {
-    color: "#333",
-    fontWeight: "500!important",
-    marginBottom: "24px!important",
-  },
-  contentWrapper:{
-    width:"100%",
-    padding:"0px 20px"
-  }
-});
 
-const Module4 = () => {
-  const classes = useStyles();
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const sections = [
-    {
-      title: "1 Introduction & Selectors",
-      status: "Completed",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video1",
-      topics: [
-        "What is CSS",
-        "Client vs Server Applications",
-        "Web Design Patterns and Architecture",
-        "Course Overview",
-        "HTML Validations",
-      ],
-    },
-    {
-      title: "2 CSS Layout & Design",
-      status: "In Progress",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video2",
-      topics: [
-        "Background - colour, images and transparency properties",
-        "Fonts, Colour and Text Properties",
-        "Box Model - Box, Inline and inline-block",
-        "Padding, Border and Margin Properties",
-      ],
-    },
-    {
-      title: "3 CSS Layout & Design",
-      status: "To Do",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video3",
-      topics: ["Positioning- Float and Display", "Flexbox and properties"],
-    },
-    {
-      title: "4 Responsive CSS",
-      status: "Completed",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video1",
-      topics: ["Media Queries", "Grid"],
-    },
-    {
-      title: "5 Animations",
-      status: "In Progress",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video2",
-      topics: [
-        "CSS Animation",
-        "Transitions",
-        "Transformations",
-        "CSS traversing",
-        "pseudo classes",
-        "child & siblling techniques",
-      ],
-    },
-    {
-      title: "6 Mastering CSS Variables, SCSS/LESS & Advanced Styling",
-      status: "To Do",
-      slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
-      videoUrl: "https://example.com/video3",
-      topics: ["Positioning- Float and Display", "Flexbox and properties"],
-    },
-  ];
-
-  const moduleDescription = {
+// Module content based on track
+const moduleContent = {
+  fullStack: {
     title: "CSS",
     subtitle: "Style your web pages with ease",
     description:
@@ -115,7 +25,236 @@ const Module4 = () => {
     skillLevel: "Beginner",
     highlightText:
       "Upon completion, you'll be able to style your HTML content using effective CSS techniques to create modern, responsive designs.",
-  };
+    sections: [
+      {
+        title: "1 Introduction & Selectors",status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video1",
+        topics: [
+          "What is CSS",
+          "Client vs Server Applications",
+          "Web Design Patterns and Architecture",
+          "Course Overview",
+          "HTML Validations",
+        ],
+      },
+      {
+        title: "2 CSS Layout & Design",
+        status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video2",
+        topics: [
+          "Background - colour, images and transparency properties",
+          "Fonts, Colour and Text Properties",
+          "Box Model - Box, Inline and inline-block",
+          "Padding, Border and Margin Properties",
+        ],
+      },
+      {
+        title: "3 CSS Layout & Design",
+        status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video3",
+        topics: ["Positioning- Float and Display", "Flexbox and properties"],
+      },
+      {
+        title: "4 Responsive CSS",status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video1",
+        topics: ["Media Queries", "Grid"],
+      },
+      {
+        title: "5 Animations",
+        status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video2",
+        topics: [
+          "CSS Animation",
+          "Transitions",
+          "Transformations",
+          "CSS traversing",
+          "Pseudo classes",
+          "Child & siblling techniques",
+        ],
+      },
+      {
+        title: "6 Mastering CSS Variables, SCSS/LESS & Advanced Styling",
+        status: "To Do",
+        slidesUrl:
+          "https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
+        videoUrl: "https://example.com/video3",
+        topics: ["Positioning- Float and Display", "Flexbox and properties"],
+      },
+    ],
+  },
+  dataScience: {
+    title: "Exploratory Data Analysis",
+    subtitle: "Data Visualization and Insights Discovery",
+    description: "Learn techniques for exploring, visualizing, and understanding data patterns. Master the art of data cleaning, preprocessing, and extracting meaningful insights from datasets.",
+    learningOutcomes: [
+      "Clean and preprocess raw data effectively",
+      "Create insightful data visualizations",
+      "Perform feature engineering and selection",
+      "Identify patterns and relationships in data",
+      "Communicate findings through data storytelling"
+    ],
+    prerequisites: [
+      "Python programming",
+      "Basic statistics knowledge"
+    ],
+    duration: "3 weeks",
+    skillLevel: "Intermediate",
+    highlightText: "Upon completion, you'll be able to analyze complex datasets and extract actionable insights through visualization and exploration.",
+    sections: [
+      {
+        title: "Introduction to EDA and Data Collection",
+        status: "To Do",
+        videoUrl: "https://example.com/video1",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Definition and importance of EDA",
+          "Objectives and steps in EDA",
+          "Data sources and importing data",
+          "Initial inspection of data",
+          "Introduction to Python libraries for data analysis (pandas, numpy)",
+        ],
+      },
+      {
+        title: "Data Cleaning Basics",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Handling missing values",
+          "Techniques for dealing with missing data",
+          "Identifying and removing duplicates",
+          "Basic data type conversions",
+        ],
+      },
+      {
+        title: "Data Transformation",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Normalization and standardization",
+          "Encoding categorical variables",
+          "Handling datetime data",
+          "Dealing with skewed data",
+        ],
+      },
+      {
+        title: "Summary Statistics and Data Distributions",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Measures of central tendency (mean, median, mode)",
+          "Measures of dispersion (variance, standard deviation)",
+          "Understanding data distributions",
+          "Creating and interpreting histograms, box plots, and scatter plots",
+        ],
+      },
+      {
+        title: "Data Visualization Fundamentals",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Importance of data visualization in EDA",
+          "Introduction to visualization libraries (Matplotlib, Seaborn)",
+          "Creating basic plots: bar charts, line graphs, scatter plots",
+          "Best practices in data visualization",
+        ],
+      },
+      {
+        title: "Advanced Visualization and Feature Engineering",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Creating advanced plots: heatmaps, pair plots, violin plots",
+          "Techniques for visualizing high-dimensional data",
+          "Introduction to feature engineering",
+          " Creating new features and selecting important features",
+        ],
+      },
+      {
+        title: "Outlier Detection and Handling",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: [
+          "Understanding outliers and their impact",
+          "Techniques for identifying outliers (Z-score, IQR method)",
+          "Visualizing outliers",
+          "Strategies for handling outliers",
+          "Introduction to anomaly detection techniques",
+        ],
+      },
+      {
+        title: "Hypothesis Testing and Presenting Findings",
+        status: "To Do",
+        videoUrl: "https://example.com/video2",
+        slidesUrl: "https://docs.google.com/presentation/d/xyz",
+        topics: ["Basic concepts of hypothesis testing",
+          "Conducting simple statistical tests (t-tests, chi-square tests)",
+         "Interpreting p-values and significance levels",
+          "Techniques for summarizing and presenting EDA findings",
+          "Introduction to data storytelling"
+        ],
+      },
+    ],
+  },
+};
+
+const useStyles = makeStyles({
+  moduleContainer: {
+    width: "100%",
+    padding: "24px",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+  },
+  content: {
+    display: "flex",
+    gap: "24px",
+    "@media (max-width: 1024px)": {
+      flexDirection: "column",
+      gap: "16px",
+    },
+  },
+  header: {
+    marginBottom: "24px",
+  },
+  moduleTitle: {
+    color: "#333",
+    fontWeight: "500!important",
+    marginBottom: "24px!important",
+    "@media (max-width: 768px)": {
+      fontSize: "1.75rem!important",
+      marginBottom: "16px!important",
+    },
+  },
+  contentWrapper: {
+    width: "100%",
+    padding: "0px 20px",
+    "@media (max-width: 768px)": {
+      padding: "0px",
+    },
+  },
+});
+
+const Module4 = () => {
+  const classes = useStyles();
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const userTrack = localStorage.getItem("userTrack") || "fullStack";
+  const content = moduleContent[userTrack];
 
   const handleAccordionChange = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -126,24 +265,35 @@ const Module4 = () => {
       <Box className={classes.header}>
         <ModuleSwitcher currentModule="/curriculam/module4" />
         <Typography variant="h4" className={classes.moduleTitle}>
-          CSS
+          {content.title}
         </Typography>
       </Box>
 
       <Box className={classes.content}>
-        <ModuleDescription moduleData={moduleDescription} />
+        <ModuleDescription
+          moduleData={{
+            title: content.title,
+            subtitle: content.subtitle,
+            description: content.description,
+            learningOutcomes: content.learningOutcomes,
+            prerequisites: content.prerequisites,
+            duration: content.duration,
+            skillLevel: content.skillLevel,
+            highlightText: content.highlightText,
+          }}
+        />
 
         <Box className={classes.contentWrapper}>
           <Box className={classes.dropdownSection}>
-            {sections.map((section, index) => (
+            {content.sections.map((section, index) => (
               <ModuleDropdown
                 key={index}
                 index={index}
                 title={section.title}
                 status={section.status}
                 topics={section.topics}
-                slidesUrl={section.slidesUrl}
                 videoUrl={section.videoUrl}
+                slidesUrl={section.slidesUrl}
                 expanded={expandedIndex === index}
                 onChange={handleAccordionChange}
               />

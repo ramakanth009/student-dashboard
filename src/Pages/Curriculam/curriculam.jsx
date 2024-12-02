@@ -56,16 +56,16 @@ const fullStackCurriculum = [
     title: "Backend Development",
     icon: "BE",
     modules: [
-      {
-        moduleNumber: 8,
-        title: "Introduction to Server-side Programming",
-        submissionStatus: "To do",
-      },
-      {
-        moduleNumber: 9,
-        title: "Introduction to Data Structures",
-        submissionStatus: "Pending",
-      },
+      // {
+      //   moduleNumber: 8,
+      //   title: "Introduction to Server-side Programming",
+      //   submissionStatus: "To do",
+      // },
+      // {
+      //   moduleNumber: 9,
+      //   title: "Introduction to Data Structures",
+      //   submissionStatus: "Pending",
+      // },
       {
         moduleNumber: 10,
         title: "Server-side Programming",

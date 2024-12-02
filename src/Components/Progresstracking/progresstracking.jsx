@@ -31,28 +31,28 @@ const ProgressTracking = () => {
   const moduleProgress = [
     { 
       label: 'Watched Videos', 
-      value: 65, 
+      value: 1, 
       color: 'primary',
       streak: 7,
       badge: 'Video Master'
     },
     { 
       label: 'To Do Modules', 
-      value: 40, 
+      value: 1, 
       color: 'secondary',
       streak: 3,
       badge: 'Getting Started'
     },
     { 
       label: 'In Progress Modules', 
-      value: 75, 
+      value: 1, 
       color: 'warning',
       streak: 5,
       badge: 'Steady Pace'
     },
     { 
       label: 'Completed Modules', 
-      value: 90, 
+      value: 1, 
       color: 'success',
       streak: 12,
       badge: 'Achievement Hunter'

@@ -59,32 +59,32 @@ const Profile = () => {
   const [showAvatarOptions, setShowAvatarOptions] = useState(false);
   
   const [profile, setProfile] = useState({
-    FirstName: 'Ramakanth',
-    LastName: 'Kannuri',
-    Gender: 'Male',
-    Email: 'ramakanthkannuri@gmail.com',
-    Contact: '+91 0000000000',
-    Whatsapp: '+91 0000000000'
+    FirstName: '',
+    LastName: '',
+    Gender: '',
+    Email: '@gmail.com',
+    Contact: '+91 ',
+    Whatsapp: '+91 '
   });
 
   const [tempProfile, setTempProfile] = useState({});
 
   const [education, setEducation] = useState({
-    HighestEducationQualification: 'Under Graduation',
-    YearOfGraduation: '2024',
-    Branch: 'Computer Science',
-    CollegeUniversityName: 'Example University',
-    CGPAOrPercentage: '8.5',
-    AdditionalCertificates: 'AWS, React Developer'
+    HighestEducationQualification: ' ',
+    YearOfGraduation: '',
+    Branch: ' ',
+    CollegeUniversityName: '',
+    CGPAOrPercentage: '',
+    AdditionalCertificates: ' '
   });
 
   const [tempEducation, setTempEducation] = useState({});
 
   const [moreInfo, setMoreInfo] = useState({
-    GitHubEmailID: 'ramakanthram014@gmail.com',
-    GithubProfile: 'github.com/ramakanth009',
-    LinkedInProfileURL: 'linkedin.com/in/ramakanth',
-    AdditionalTechStack: 'React, Node.js'
+    GitHubEmailID: '@gmail.com',
+    GithubProfile: 'github.com/',
+    LinkedInProfileURL: 'linkedin.com/in/',
+    AdditionalTechStack: ''
   });
 
   const [tempMoreInfo, setTempMoreInfo] = useState({});
