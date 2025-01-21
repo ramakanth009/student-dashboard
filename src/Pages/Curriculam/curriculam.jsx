@@ -11,13 +11,18 @@ const fullStackCurriculum = [
     modules: [
       {
         moduleNumber: 1,
-        title: "Introduction to Programming",
+        title: "Developer Tools Essentials",
         submissionStatus: "To do",
       },
       {
         moduleNumber: 2,
+        title: "Introduction to Programming",
+        submissionStatus: "To do",
+      },
+      {
+        moduleNumber: 3,
         title: "Introduction to Data Structures",
-        submissionStatus: "Pending",
+        submissionStatus: "To do",
       },
     ],
   },
@@ -26,27 +31,27 @@ const fullStackCurriculum = [
     icon: "FE",
     modules: [
       {
-        moduleNumber: 3,
-        title: "HTML",
-        submissionStatus: "Submitted",
-      },
-      {
         moduleNumber: 4,
-        title: "CSS",
+        title: "HTML",
         submissionStatus: "To do",
       },
       {
         moduleNumber: 5,
-        title: "Bootstrap Layout",
+        title: "CSS",
         submissionStatus: "To do",
       },
       {
         moduleNumber: 6,
-        title: "JavaScript",
+        title: "Bootstrap Layout",
         submissionStatus: "To do",
       },
       {
         moduleNumber: 7,
+        title: "JavaScript",
+        submissionStatus: "To do",
+      },
+      {
+        moduleNumber: 8,
         title: "React",
         submissionStatus: "To do",
       },
@@ -57,32 +62,32 @@ const fullStackCurriculum = [
     icon: "BE",
     modules: [
       // {
-      //   moduleNumber: 8,
+      //   moduleNumber: 9,
       //   title: "Introduction to Server-side Programming",
       //   submissionStatus: "To do",
       // },
       // {
-      //   moduleNumber: 9,
+      //   moduleNumber: 10,
       //   title: "Introduction to Data Structures",
       //   submissionStatus: "Pending",
       // },
       {
-        moduleNumber: 10,
+        moduleNumber: 11,
         title: "Server-side Programming",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 11,
+        moduleNumber: 12,
         title: "Spring Framework",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 12,
+        moduleNumber: 13,
         title: "Node.js and Express.js",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 13,
+        moduleNumber: 14,
         title: "Python & PHP for backend",
         submissionStatus: "To do",
       },
@@ -93,7 +98,7 @@ const fullStackCurriculum = [
     icon: "DB",
     modules: [
       {
-        moduleNumber: 14,
+        moduleNumber: 15,
         title: "Databases",
         submissionStatus: "To do",
       },
@@ -108,13 +113,34 @@ const dataScienceCurriculum = [
     modules: [
       {
         moduleNumber: 1,
+        title: "Developer Tools Essentials",
+        submissionStatus: "To do",
+      },
+      //     {
+      //       moduleNumber: 2,
+      //       title: "Introduction to Programming",
+      //       submissionStatus: "To do",
+      //     },
+      //     {
+      //       moduleNumber: 3,
+      //       title: "Introduction to Data Structures",
+      //       submissionStatus: "To do",
+      //     },
+      //   ],
+      // },
+      // {
+      //   title: "Programming Fundamentals",
+      //   icon: "PF",
+      //   modules: [
+      {
+        moduleNumber: 2,
         title: "Python Programming Basics",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 2,
+        moduleNumber: 3,
         title: "SQL & Databases",
-        submissionStatus: "Pending",
+        submissionStatus: "To do",
       },
     ],
   },
@@ -123,16 +149,15 @@ const dataScienceCurriculum = [
     icon: "DA",
     modules: [
       {
-        moduleNumber: 3,
+        moduleNumber: 4,
         title: "Statistics & Mathematics",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 4,
+        moduleNumber: 5,
         title: "Exploratory Data Analysis",
         submissionStatus: "To do",
       },
-      
     ],
   },
   {
@@ -140,22 +165,22 @@ const dataScienceCurriculum = [
     icon: "ML",
     modules: [
       {
-        moduleNumber: 5,
+        moduleNumber: 6,
         title: "Machine Learning",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 6,
+        moduleNumber: 7,
         title: "Deep Learning",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 7,
+        moduleNumber: 8,
         title: "NLP",
         submissionStatus: "To do",
       },
       {
-        moduleNumber: 8,
+        moduleNumber: 9,
         title: "Generative AI",
         submissionStatus: "To do",
       },
@@ -173,12 +198,12 @@ const dataScienceCurriculum = [
   //     {
   //       moduleNumber: 10,
   //       title: "Natural Language Processing",
-  //       submissionStatus: "To do",
+  //       submissionStatus: "Pending",
   //     },
   //     {
   //       moduleNumber: 11,
   //       title: "Big Data Analytics",
-  //       submissionStatus: "To do",
+  //      submissionStatus: "Submitted",,
   //     },
   //   ],
   // },

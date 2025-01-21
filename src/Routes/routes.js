@@ -9,9 +9,11 @@ import Help from "../Pages/Help/help";
 import Git from "../Pages/Git/git";
 import Login from "../Pages/Login/login";
 // import ScheduleGrid from '../Elements/Daybox/Shedulegrid'
+// import Scrolltop from "../Strolltop";
 
 // Lazy load module components
 const moduleImports = {
+  
   Module1: React.lazy(() => import("../Pages/Module_pages/Module1/module1")),
   Module2: React.lazy(() => import("../Pages/Module_pages/Module2/module2")),
   Module3: React.lazy(() => import("../Pages/Module_pages/Module3/module3")),
@@ -26,12 +28,13 @@ const moduleImports = {
   Module12: React.lazy(() => import("../Pages/Module_pages/Module12/module12")),
   Module13: React.lazy(() => import("../Pages/Module_pages/Module13/module13")),
   Module14: React.lazy(() => import("../Pages/Module_pages/Module14/module14")),
+  Module15: React.lazy(() => import("../Pages/Module_pages/Module15/module15")),
 };
 
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+    <div className="animate-spin rounded-full -12 w-12 border-t-2 border-b-2 border-blue-500"></div>
   </div>
 );
 
@@ -75,6 +78,7 @@ const ProtectedRoute = ({ children }) => {
 const AppRoutes = () => {
   return (
     <Routes>
+      {/* <Scrolltop /> */}
       {/* Public routes */}
       <Route path="/login" element={<Login />} />
       
@@ -95,7 +99,7 @@ const AppRoutes = () => {
       {/* <Route path="/schedule" element={<ScheduleGrid />} /> */}
       
       {/* Module routes */}
-      {Array.from({ length: 14 }, (_, i) => i + 1).map((moduleNumber) => (
+      {Array.from({ length: 15 }, (_, i) => i + 1).map((moduleNumber) => (
         <Route
           key={`module${moduleNumber}`}
           path={`/curriculam/module${moduleNumber}`}

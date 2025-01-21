@@ -523,3 +523,12 @@ const colors = {
     dark: "#FF6B00",     // Dark orange
   },
 };
+
+
+
+
+{
+  devTools: {
+    
+  }
+}

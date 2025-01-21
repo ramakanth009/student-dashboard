@@ -9,46 +9,47 @@
   // Module content based on track
   const moduleContent = {
     fullStack: {
-      title: "Databases",
-      subtitle: "Manage and query data effectively",
-      description:
-        "This module covers the basics of database design, querying, and management. You'll learn how to store, retrieve, and manipulate data using SQL and NoSQL databases.",
-      learningOutcomes: [
-        "Understand the fundamentals of relational and NoSQL databases",
-        "Write and execute SQL queries to manage data",
-        "Design efficient database schemas for web applications",
-        "Work with popular database management systems (e.g., MySQL, MongoDB)",
-        "Integrate databases with back-end applications",
-      ],
-      prerequisites: [
-        "Basic understanding of server-side programming",
-        "Knowledge of web development",
-      ],
-      duration: "3 weeks",
-      skillLevel: "Intermediate",
-      highlightText:
-        "Upon completion, you'll be able to design and manage databases for web applications and perform complex data queries.",
+      title: "Python & PHP for Backend",
+    subtitle: "Learn server-side programming with Python and PHP",
+    description:
+      "This module teaches the fundamentals of backend development using Python and PHP. You'll learn how to handle server-side logic, work with databases, and develop dynamic web applications.",
+    learningOutcomes: [
+      "Understand the principles of server-side programming",
+      "Write backend logic using Python and PHP",
+      "Develop RESTful APIs and handle HTTP requests",
+      "Work with databases and manage server-side sessions",
+      "Deploy Python and PHP applications on a server",
+    ],
+    prerequisites: [
+      "Basic programming knowledge",
+      "Understanding of web development",
+    ],
+    duration: "4 weeks",
+    skillLevel: "Intermediate",
+    highlightText:
+      "Upon completion, you'll be able to build server-side applications using Python and PHP.",
       sections: [
         {
-          title: "1  Relational Databases & SQL",
-          status: "Completed",
+          title: "1 Python",
+          status: "To Do",
           slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
           videoUrl: "https://example.com/video1",
           topics: [
-            " Relational Databases",
-            "Introduction to SQL",
-            "Introduction to MySQL",
+            "Introduction to Python",
+            "Flask Framework",
+            "Django Framework",
+            "RESTful API Development",
           ],
         },
         {
-          title: "2 PostgreSQL, NoSQL, MongoDB ",
-          status: "In Progress",
+          title: "2 PHP",
+          status: "To Do",
           slidesUrl:"https://docs.google.com/presentation/d/1hluN1783q8a8M9vuw_zQYwYq8lcc1rnQNYO6g0q6cTk/edit#slide=id.p",
           videoUrl: "https://example.com/video2",
           topics: [
-            "Introduction to PostgreSQL",
-            "Introduction to NoSQL Databases",
-            "Introduction to MongoDB",
+            "Introduction to PHP",
+            "PHP Frameworks (Laravel, CodeIgniter)",
+            "RESTful API Development",
           ],
         },
       ],

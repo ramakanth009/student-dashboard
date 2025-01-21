@@ -266,7 +266,7 @@ import stroke from "../../../Assets/stroke.svg";
 
 // Fullstack track credentials
 const FULLSTACK_CREDENTIALS = [
-  { username: "sameershaikh@gigaversity.in", password: "Sameera@123" },
+  { username: "sameershaikh@gigaversity.in", password: "Sameer@123" },
   { username: "saikrishnachevula@gigaversity.in", password: "Saikrish@123" },
   { username: "fullstack", password: "sun" },
 ];
@@ -274,7 +274,7 @@ const FULLSTACK_CREDENTIALS = [
 // Data Science track credentials
 const DATASCIENCE_CREDENTIALS = [
   { username: "priyakommireddy@gigaversity.in", password: "Priyak@123" },
-  { username: "shalinilankapali@gigaversity.in", password: "Shalini@123" },
+  { username: "shalinilankapalli@gigaversity.in", password: "Shalini@123" },
   { username: "padmagandha@gigaversity.in", password: "Padma@123" },
   { username: "datascience", password: "sun" },
 ];

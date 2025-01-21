@@ -5,6 +5,7 @@ import AppRoutes from "./Routes/routes.js";
 import { useLocation } from "react-router-dom";
 import ErrorBoundary from "./error-boundary";
 
+
 function App() {
   const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
